@@ -21,77 +21,73 @@
 <body>
     
     <div class="payment">
-        <form action="">
+        <form onsubmit="sendWhatsAppMessage(); return false;">
             <h3 class="title">Payment</h3>
-
+    
             <div class="row">
-
                 <div class="col">
-
                     <div class="inputBox">
                         <span>Username</span>
-                        <input type="text" placeholder="name">
+                        <input type="text" placeholder="name" name="username">
                     </div>
                     <div class="inputBox">
                         <span>Email</span>
-                        <input type="text" placeholder="email">
+                        <input type="text" placeholder="email" name="email">
                     </div>
                     <div class="inputBox">
                         <span>Address</span>
-                        <input type="text" placeholder="address">
+                        <input type="text" placeholder="address" name="address">
                     </div>
                     <div class="inputBox">
                         <span>City</span>
-                        <input type="text" placeholder="city">
+                        <input type="text" placeholder="city" name="city">
                     </div>
-
+    
                     <div class="flex">
                         <div class="inputBox">
                             <span>State</span>
-                            <input type="text" placeholder="state">
+                            <input type="text" placeholder="state" name="state">
                         </div>
                         <div class="inputBox">
                             <span>Zip code</span>
-                            <input type="text" placeholder="Zip code">
+                            <input type="text" placeholder="Zip code" name="zipcode">
                         </div>
                     </div>
                 </div>
-
+    
                 <div class="col">
-
                     <div class="inputBox">
                         <span>Payment Method</span>
                         <img class="methodPay" src="../assets/img/metodePayment.png" alt="">
                     </div>
                     <div class="inputBox">
                         <span>Name on card</span>
-                        <input type="text" placeholder="name on card">
+                        <input type="text" placeholder="name on card" name="cardname">
                     </div>
                     <div class="inputBox">
                         <span>Credit card number</span>
-                        <input type="number" placeholder="credit card number">
+                        <input type="number" placeholder="credit card number" name="cardnumber">
                     </div>
                     <div class="inputBox">
                         <span>Exp month</span>
-                        <input type="text" placeholder="exp month">
+                        <input type="text" placeholder="exp month" name="expmonth">
                     </div>
                     <div class="flex">
                         <div class="inputBox">
                             <span>exp year</span>
-                            <input type="number" placeholder="exp year">
+                            <input type="number" placeholder="exp year" name="expyear">
                         </div>
                         <div class="inputBox">
                             <span>CVV</span>
-                            <input type="text" placeholder="CVV">
+                            <input type="text" placeholder="CVV" name="cvv">
                         </div>
                     </div>
                 </div>
             </div>
-
+    
             <input type="submit" value="Buat Pesanan" class="submit-btn">
-
-        </form>
+        </form> 
     </div>
-
+    <script src="./js/paymentForm.js"></script>
 </body>
 </html>
