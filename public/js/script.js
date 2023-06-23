@@ -1,5 +1,5 @@
 const carousel = document.getElementById('carousel');
-const kategories = document.getElementById('kategori');
+const kategori = document.getElementById('kategori');
 const katalog = document.getElementById('katalog');
 const detailProduct = document.getElementById('proDetails');
 // Carousel
