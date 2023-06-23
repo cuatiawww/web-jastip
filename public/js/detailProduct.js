@@ -15,6 +15,12 @@ smallimg[3].onclick = function() {
     MainImg.src = smallimg[3].src;
 }
 
+// masuk detail produk
 function pindahHalaman() {
     window.location.href = 'detailProduct.html';
+}
+
+// masuk pemesanan
+function pesanan() {
+    window.location.href = 'paymentForm.html';
 }

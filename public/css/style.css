@@ -506,3 +506,89 @@ h6 {
     width: 100%;
   }
 }
+
+/* paymentForm */
+.payment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  min-height: 100vh;
+  background: rgb(241, 241, 241);
+  padding-bottom: 70px;
+}
+
+.payment form {
+  padding: 20px;
+  width: 700px;
+  background: white;
+  box-shadow: 0 5px 10px rgb(107, 107, 107);
+}
+
+.payment form .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.payment form .row .col {
+  flex: 1 1 250px;
+}
+
+.payment form .title {
+  font-size: 20px;
+  color: rgb(40, 40, 40);
+  padding-bottom: 5px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.payment form .row .col .inputBox {
+  margin: 15px 0;
+}
+
+.payment form .row .col .inputBox span {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.payment form .row .col .inputBox input {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  font-size: 15px;
+  text-transform: none;
+}
+
+.payment form .row .col .inputBox input:focus {
+  border: 1px solid #000;
+}
+
+.payment form .row .col .flex {
+  display: flex;
+  gap: 15px;
+}
+
+.payment form .row .col .flex .inputBox {
+  margin-top: 5px;
+}
+
+.methodPay {
+  width: 50%;
+  height: 80%;
+  margin-top: 5px;
+}
+
+.payment form .submit-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 17px;
+  background: rgb(11, 155, 14);
+  color: #fff;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.payment form .submit-btn:hover {
+  background: rgb(31, 184, 34);
+}
