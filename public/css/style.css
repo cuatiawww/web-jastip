@@ -503,6 +503,20 @@ h6 {
     margin-right: 0px;
   }
   #prodetails .single-pro-details {
+    width: 50%;
+  }
+}
+
+@media (max-width: 790px) {
+  #prodetails {
+    display: flex;
+    flex-direction: column;
+  }
+  #prodetails .single-pro-image {
+    width: 100%;
+    margin-right: 0px;
+  }
+  #prodetails .single-pro-details {
     width: 100%;
   }
 }
@@ -591,4 +605,14 @@ h6 {
 
 .payment form .submit-btn:hover {
   background: rgb(31, 184, 34);
+}
+
+/* related product */
+
+#related .pro-container {
+  margin: 0 75px;
+}
+
+#related hr {
+  color: #ecb807;
 }
