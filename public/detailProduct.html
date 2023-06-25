@@ -36,7 +36,7 @@
             <img
               src="../assets/img/k1.2.jpg"
               width="100%"
-              class="small-img"
+              class="small-img small1"
               alt=""
             />
           </div>
@@ -44,7 +44,7 @@
             <img
               src="../assets/img/k1.3.jpg"
               width="100%"
-              class="small-img"
+              class="small-img small2"
               alt=""
             />
           </div>
@@ -52,7 +52,7 @@
             <img
               src="../assets/img/k1.4.jpg"
               width="100%"
-              class="small-img"
+              class="small-img small3"
               alt=""
             />
           </div>
@@ -71,8 +71,8 @@
         <input type="number" value="1" min="0" />
         <button class="normal" onclick="pesanan('./paymentForm.html')">Beli Sekarang</button>
         <h4>Product Details</h4>
-        <span
-          >Shmoofoil Painted Short Sleeve Tee A Tee for all genders with art by
+        <span id="details">
+          Shmoofoil Painted Short Sleeve Tee A Tee for all genders with art by
           Gonz. With graphics pulled from paintings created by adidas
           Skateboarding team rider Mark Gonzales, the Shmoofoil Painted Short
           Sleeve Tee offers staple style with a personal touch from The Gonz. By
@@ -93,41 +93,63 @@
         <hr>
       </div>
       <div class="pro-container">
-        <!-- box 1 -->
-        <div class="pro">
+       <!-- Box 1 -->
+         <div class="pro" onclick="pindahHalaman(1)">
+          <img src="../assets/img/k1.jpg" alt="kaos" class="product-img" />
+          <h2 class="product-title">Shmoofoil T-Shirt</h2>
+          <span class="price">Rp380.000</span>
+          <p class="store">Adidas</p>
+          <i class="bx bxs-cart-add add-cart"></i>
+        </div>
+     <!-- Box 2 -->
+        <div class="pro" onclick="pindahHalaman(2)">
           <img src="../assets/img/k2.jpg" alt="kaos" class="product-img" />
           <h2 class="product-title">T-Shirt Tribute to Leo</h2>
           <span class="price">Rp180.000</span>
           <p class="store">Aloomni</p>
           <i class="bx bxs-cart-add add-cart"></i>
         </div>
-        <!-- Box 2 -->
-        <div class="pro">
-          <img src="../assets/img/k1.jpg" alt="kaos" class="product-img" />
-          <h2 class="product-title">Shmoofoil T-Shirt</h2>
-          <span class="price">Rp380.000</span>
+     <!-- Box 3 -->
+        <div class="pro" onclick="pindahHalaman(3)">
+          <img src="../assets/img/s1.jpg" alt="sepatu" class="product-img" />
+          <h2 class="product-title">J Balvin x Nike Air Jordan</h2>
+          <span class="price">Rp8.889.000</span>
+          <p class="store">Nike</p>
+          <i class="bx bxs-cart-add add-cart"></i>
+        </div>
+     <!-- Box 4 -->
+        <div class="pro" onclick="pindahHalaman(4)">
+          <img src="../assets/img/s2.jpg" alt="sepatu" class="product-img" />
+          <h2 class="product-title">Adidas Yeezy Boost 350</h2>
+          <span class="price">Rp6.340.000</span>
           <p class="store">Adidas</p>
           <i class="bx bxs-cart-add add-cart"></i>
         </div>
-        <!-- Box 3 -->
-        <div class="pro">
-          <img src="../assets/img/k1.jpg" alt="kaos" class="product-img" />
-          <h2 class="product-title">Shmoofoil T-Shirt</h2>
-          <span class="price">Rp380.000</span>
-          <p class="store">Adidas</p>
+      <!-- Box 5 -->
+        <div class="pro" onclick="pindahHalaman(5)">
+          <img src="../assets/img/h1.jpg" alt="hp" class="product-img" />
+          <h2 class="product-title">iPhone 14 Pro Max</h2>
+          <span class="price">Rp16.380.000</span>
+          <p class="store">Apple</p>
+          <i class="bx bxs-cart-add add-cart"></i>
+        </div> 
+      <!-- Box 6 -->
+        <div class="pro" onclick="pindahHalaman(6)">
+          <img src="../assets/img/f1.png" alt="funko" class="product-img" />
+          <h2 class="product-title">Pop Guardians of The Galaxy Vol 2</h2>
+          <span class="price">Rp480.000</span>
+          <p class="store">Funko</p>
           <i class="bx bxs-cart-add add-cart"></i>
         </div>
-        <!-- box 4 -->
-        <div class="pro">
-          <img src="../assets/img/k1.jpg" alt="kaos" class="product-img" />
-          <h2 class="product-title">Shmoofoil T-Shirt</h2>
-          <span class="price">Rp380.000</span>
-          <p class="store">Adidas</p>
+      <!-- Box 7 -->
+        <div class="pro" onclick="pindahHalaman(7)">
+          <img src="../assets/img/b1.2.jpg" alt="buku" class="product-img" />
+          <h2 class="product-title">Manga One Piece Vol 105</h2>
+          <span class="price">Rp180.000</span>
+          <p class="store">Jump Comics</p>
           <i class="bx bxs-cart-add add-cart"></i>
         </div>
-      </div>
     </section>
-    <!-- Content -->
 
     <!-- Script-->
     <script src="./js/detailProduct.js"></script>
