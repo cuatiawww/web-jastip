@@ -14,24 +14,29 @@
 //         kodeBrg[i].innerHTML = kodeBarang;
 //     }
 // }
-function generateUniqueCode() {
-    // Menghasilkan angka acak antara 1000 dan 9999
-    var uniqueCode = Math.floor(Math.random() * (9999 - 1000 + 1)) + 1000;
-    return uniqueCode;
-  }
+  
+
   
   function kodeBrgBook() {
-    var kodeBrgElements = document.getElementsByClassName("kodeBrg");
+    let kodeBrgElements = document.getElementsByClassName("kodeBrg");
   
-    for (var i = 0; i < kodeBrgElements.length; i++) {
-      var index = kodeBrgElements[i].getAttribute("data-index");
-      var kodeBarang = generateUniqueCode();
+    for (let i = 0; i < kodeBrgElements.length; i++) {
+      let element = kodeBrgElements[i];
+      let index = element.getAttribute("data-index");
   
-      kodeBrgElements[i].innerHTML = kodeBarang;
+      // Membaca nilai kode barang dari localStorage berdasarkan kombinasi "data-index" dan indeks elemen
+      let kodeBarang = localStorage.getItem(index + "_" + i);
+      // angka acak
+      if (!kodeBarang) {
+        kodeBarang = Math.floor(Math.random() * 9999) + 1;
+        localStorage.setItem(index + "_" + i, kodeBarang);
+      }
+  
+      element.innerHTML = kodeBarang;
     }
   }
   
-  // Memanggil fungsi kodeBrgBook saat halaman dimuat
   document.addEventListener("DOMContentLoaded", kodeBrgBook);
+  
   
   
