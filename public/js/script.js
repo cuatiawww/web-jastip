@@ -24,4 +24,3 @@ fetch('./detailProduct').then(function(snap){
     })
 })
 
-
