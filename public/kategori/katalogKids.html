@@ -39,7 +39,7 @@
     <!-- MDB -->
     <link rel="stylesheet" href="../../node_modules/mdb/css/mdb.min.css" />
   </head>
-  <body>
+  <body onload="randomKodeBrg()">
     <!-- Navigation -->
     <a class="menu-toggle rounded" href="../index.html"
       ><i class="fa-solid fa-chevron-left"></i
@@ -47,13 +47,13 @@
 
     <div class="mb-4" style="background-color: #ecbb1c">
       <div class="container py-4">
-        <h3 class="text-white mt-2">Kid's</h3>
+        <h3 class="text-white mt-2">Book's</h3>
         <!-- Breadcrumb -->
         <nav class="d-flex mb-2">
           <h6 class="mb-0">
             <a href="../index.html" class="text-white-50">Home</a>
             <span class="text-white-50 mx-2"> > </span>
-            <a href="" class="text-white"><u>Kid's</u></a>
+            <a href="" class="text-white"><u>Book's</u></a>
           </h6>
         </nav>
         <!-- Breadcrumb -->
@@ -97,6 +97,7 @@
                   </div>
                   <div class="col-xl-6 col-md-5 col-sm-7">
                     <h5>Rucksack Backpack Jeans</h5>
+                    <h6 class="text-muted">Kode Barang : <span class="kodeBrg"></span></h6>
                     <div class="d-flex flex-row">
                       <div class="text-warning mb-1 me-2">
                         <i class="fa fa-star"></i>
@@ -121,16 +122,10 @@
                       <h4 class="mb-1 me-1">Rp.34.000</h4>
                       <span class="text-danger"><s>Rp.49.99</s></span>
                     </div>
-                    <h6 class="text-success">Free shipping</h6>
                     <div class="mt-4">
-                      <button class="btn btn-primary shadow-0" type="button">
-                        Buy this
+                      <button class="btn btn-primary shadow-0" type="button" onclick="pesanan('../paymentForm.html')">
+                        Buy This
                       </button>
-                      <a
-                        href="#!"
-                        class="btn btn-light border px-2 pt-2 icon-hover"
-                        ><i class="fas fa-heart fa-lg px-1"></i
-                      ></a>
                     </div>
                   </div>
                 </div>
@@ -161,6 +156,7 @@
                   </div>
                   <div class="col-xl-6 col-md-5 col-sm-7">
                     <h5>Men's Denim Jeans Shorts</h5>
+                    <h6 class="text-muted">Kode Barang : <span class="kodeBrg"></span></h6>
                     <div class="d-flex flex-row">
                       <div class="text-warning mb-1 me-2">
                         <i class="fa fa-star"></i>
@@ -185,16 +181,11 @@
                       <h4 class="mb-1 me-1">Rp.34.000</h4>
                       <span class="text-danger"><s>Rp.49.999</s></span>
                     </div>
-                    <h6 class="text-warning">Paid shipping</h6>
+
                     <div class="mt-4">
-                      <button class="btn btn-primary shadow-0" type="button">
-                        Buy this
+                      <button class="btn btn-primary shadow-0" type="button" onclick="pesanan('../paymentForm.html')">
+                        Buy This
                       </button>
-                      <a
-                        href="#!"
-                        class="btn btn-light border px-2 pt-2 icon-hover"
-                        ><i class="fas fa-heart fa-lg px-1"></i
-                      ></a>
                     </div>
                   </div>
                 </div>
@@ -225,6 +216,7 @@
                   </div>
                   <div class="col-xl-6 col-md-5 col-sm-7">
                     <h5>T-shirt for Men Blue Cotton Base</h5>
+                    <h6 class="text-muted">Kode Barang : <span class="kodeBrg"></span></h6>
                     <div class="d-flex flex-row">
                       <div class="text-warning mb-1 me-2">
                         <i class="fa fa-star"></i>
@@ -248,16 +240,10 @@
                     <div class="d-flex flex-row align-items-center mb-1">
                       <h4 class="mb-1 me-1">Rp.34.000</h4>
                     </div>
-                    <h6 class="text-success">Free shipping</h6>
                     <div class="mt-4">
-                      <button class="btn btn-primary shadow-0" type="button">
-                        Buy this
+                      <button class="btn btn-primary shadow-0" type="button" onclick="pesanan('../paymentForm.html')">
+                        Buy This
                       </button>
-                      <a
-                        href="#!"
-                        class="btn btn-light border px-2 pt-2 icon-hover"
-                        ><i class="fas fa-heart fa-lg px-1"></i
-                      ></a>
                     </div>
                   </div>
                 </div>
@@ -288,6 +274,7 @@
                   </div>
                   <div class="col-xl-6 col-md-5 col-sm-7">
                     <h5>Winter Jacket for Men and Women</h5>
+                    <h6 class="text-muted">Kode Barang : <span class="kodeBrg"></span></h6>
                     <div class="d-flex flex-row">
                       <div class="text-warning mb-1 me-2">
                         <i class="fa fa-star"></i>
@@ -312,16 +299,10 @@
                       <h4 class="mb-1 me-1">Rp.34.000</h4>
                       <span class="text-danger"><s>Rp.49.999</s></span>
                     </div>
-                    <h6 class="text-success">Free shipping</h6>
                     <div class="mt-4">
-                      <button class="btn btn-primary shadow-0" type="button">
-                        Buy this
+                      <button class="btn btn-primary shadow-0" type="button" onclick="pesanan('../paymentForm.html')">
+                        Buy This
                       </button>
-                      <a
-                        href="#!"
-                        class="btn btn-light border px-2 pt-2 icon-hover"
-                        ><i class="fas fa-heart fa-lg px-1"></i
-                      ></a>
                     </div>
                   </div>
                 </div>
@@ -352,6 +333,7 @@
                   </div>
                   <div class="col-xl-6 col-md-5 col-sm-7">
                     <h5>T-shirt for Men Blue Cotton Base</h5>
+                    <h6 class="text-muted">Kode Barang : <span class="kodeBrg"></span></h6>
                     <div class="d-flex flex-row">
                       <div class="text-warning mb-1 me-2">
                         <i class="fa fa-star"></i>
@@ -376,16 +358,10 @@
                       <h4 class="mb-1 me-1">Rp.34.000</h4>
                       <span class="text-danger"><s>Rp.49.999</s></span>
                     </div>
-                    <h6 class="text-success">Free shipping</h6>
                     <div class="mt-4">
-                      <button class="btn btn-primary shadow-0" type="button">
-                        Buy this
+                      <button class="btn btn-primary shadow-0" type="button" onclick="pesanan('../paymentForm.html')">
+                        Buy This
                       </button>
-                      <a
-                        href="#!"
-                        class="btn btn-light border px-2 pt-2 icon-hover"
-                        ><i class="fas fa-heart fa-lg px-1"></i
-                      ></a>
                     </div>
                   </div>
                 </div>
@@ -408,7 +384,7 @@
             <span aria-hidden="true">&laquo;</span>
           </a>
         </li>
-        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+        <li class="page-item active"><a class="page-link" href="./katalogBook.html">1</a></li>
         <li class="page-item"><a class="page-link" href="#">2</a></li>
         <li class="page-item"><a class="page-link" href="#">3</a></li>
         <li class="page-item"><a class="page-link" href="#">4</a></li>
@@ -420,5 +396,7 @@
         </li>
       </ul>
     </nav>
+    <script src="../js/detailProduct.js"></script>
+    <script src="../js/randomkodeBrg.js"></script>
   </body>
 </html>

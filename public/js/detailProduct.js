@@ -21,6 +21,6 @@ function pindahHalaman() {
 }
 
 // masuk pemesanan
-function pesanan() {
-    window.location.href = 'paymentForm.html';
+function pesanan(url) {
+    window.location.href = url;
 }
