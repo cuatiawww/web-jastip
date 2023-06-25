@@ -426,6 +426,10 @@ h6 {
   padding-top: 5px;
 }
 
+.hidden {
+  display: none;
+}
+
 .small-img-col {
   flex-basis: 24%;
   cursor: pointer;
