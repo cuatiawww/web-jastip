@@ -361,13 +361,13 @@ a{
   color: #ecbb1c;
 }
 .btn-outline-secondary{
-  border-color: #000 ;
+  border-color: white !important;
 }
 
 .btn-outline-secondary:hover {
   background-color: #ecbb1c;
   color: #fff;
-  border-color: #000 ;
+  border-color: white !important;
 }
 
 .btn-outline-secondary:hover .icon-kategori {
