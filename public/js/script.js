@@ -6,6 +6,7 @@ const serviceByJastip = document.getElementById('serviceByJastip');
 const brand = document.getElementById('brandLogo');
 const liveJastip = document.getElementById('liveJastip');
 const ourTeam = document.getElementById('ourTeam');
+const footer = document.getElementById('footer');
 // Carousel
 fetch('./carousel.html').then(function(snap){
     snap.text().then(function(result){
@@ -45,6 +46,11 @@ fetch('./liveJastip.html').then(function(snap){
 fetch('./ourTeam.html').then(function(snap){
     snap.text().then(function(result){
         ourTeam.innerHTML = result;
+    })
+})
+fetch('./footer.html').then(function(snap){
+    snap.text().then(function(result){
+        footer.innerHTML = result;
     })
 })
 
