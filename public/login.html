@@ -31,7 +31,6 @@
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="./css/style.css" />
     <style>
       html,
       body {
@@ -41,7 +40,7 @@
         justify-content: center;
       }
       .card {
-        width: 400px;
+        width: 600px;
       }
       .container {
         height: 100%;
@@ -54,38 +53,50 @@
   </head>
   <body>
     <div class="container">
-      <div class="card">
+      <div class="card bg-dark text-white rounded-5">
         <div class="card-body">
-          <div class="Landing">
+          <div class="Landing d-grid col-12 mx-auto bg-black text-white p-4 rounded-5">
+            <header class="text-center">
+              <h4>Selamat Datang & Selamat Berbelanja DJastip</h4>
+            </header>
+            <hr>
             <div class="inputan">
-              <label for="email">Email</label>
-              <input
-                type="text"
-                name="email"
-                id="email"
-                placeholder="Enter Email"
-                class="form-control"
-              />
-              <label for="password">Password</label>
-              <input
-                type="password"
-                name="password"
-                id="password"
-                placeholder="Enter Password"
-                class="form-control"
-              />
+              <div class="form-outline">
+                <label for="email" class="form-label mb-1">Email</label>
+                <input
+                  type="text"
+                  name="email"
+                  id="email"
+                  placeholder="Enter Email  "
+                  class="form-control bg-dark text-white"
+                />
+              </div>
+              <div class="mt-2">
+                <label for="password" class="form-label mb-1">Password</label>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Enter Password"
+                  class="form-control bg-dark text-white"
+                />
+              </div>
             </div>
-            <div class="tombolan mt-3">
-              <button data-button="register" class="btn btn-primary">
-                Register
-              </button>
-              <button data-button="login" class="btn btn-primary">Login</button>
+            <div class="tombolan mx-auto mt-4 col-12">
+              <button data-button="login" class="btn btn-primary w-100">Login</button>
+            </div>
+          </div>
+          <div class="d-flex justify-content-end">
+            <div class="tombolan m-2">
+              <button data-button="register" class="btn btn-primary rounded-3">
+                <i class="fa-solid fa-arrow-right-to-bracket "></i>
+              Register</button>
             </div>
           </div>
         </div>
       </div>
     </div>
-
+    
     <!-- FIREBASE WAJIB -->
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
 

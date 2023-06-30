@@ -258,6 +258,7 @@ body {
   top: 15px;
   width: 50px;
   height: 50px;
+  border: none !important;
 
   justify-content: center;
   align-items: center;
@@ -446,13 +447,14 @@ h6 {
 
 .pro:hover {
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
-  background: rgb(107, 107, 107);
+  background: linear-gradient(#ecbc1c, #fbc835);
   border: 1px solid #f0f0f0;
+  border: 2px solid ;
 }
 
 .pro:hover .product-title,
 .pro:hover .price,
-.pro:hover .store {
+.pro:hover .store, {
   color: #e5e5e5;
 }
 
@@ -755,6 +757,63 @@ h6 {
 .match-height:hover {
   transform: translateY(-5px);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+/* OUR TEAM */
+.container-team {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center; 
+}
+.column {
+  flex: 0 0 25.33%;
+  width: 25.33%;
+  padding: 0 1em;
+}
+.card {
+  box-shadow: 0 0 2.4em rgba(25, 0, 58, 0.1);
+  padding: 1em 0.5em;
+  border-radius: 0.6em;
+  color: black;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: #ffffff;
+  
+}
+.card img {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+  border: 2px solid ;
+  border-color: black;
+}
+.card h3 {
+  font-weight: 500;
+  text-align: center;
+}
+.card p {
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 0.5em 0 2em 0;
+  letter-spacing: 2px;
+  text-align: center;
+}
+.icons {
+  width: 50%;
+  min-width: 180px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.card a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.4em;
+}
+.card:hover {
+  background: linear-gradient(#ecbc1c, #fbc835);
+  color: #000;
+  border: 2px solid ;
 }
 
 
