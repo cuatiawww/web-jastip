@@ -167,6 +167,25 @@ body {
     max-width: 1320px;
   }
 }
+/* BUTTON */
+.btn-primary {
+  background: #ecbb1c;
+  border-color: #ecbb1c;
+}
+
+.btn-primary:hover {
+  background: #a47c1c;
+  border-color: #a47c1c;
+}
+
+.normal {
+  background-color: #ecbb1c !important;
+  color: #fff;
+}
+.normal:hover {
+  background: #a47c1c !important;
+}
+
 
 /* NAVIGASI */
 #sidebar-wrapper {
