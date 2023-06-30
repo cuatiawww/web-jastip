@@ -39,12 +39,14 @@ fetch('./brand.html').then(function(snap){
 // Brand
 setInterval(scrollImage, 3000);
 
-    function scrollImage() {
-        const block = document.querySelector('.block');
-        const firstImage = block.querySelector('img');
-        block.style.transform = `translateX(-${firstImage.offsetWidth}px)`;
-        setTimeout(() => {
-            block.appendChild(firstImage);
-            block.style.transform = 'translateX(0)';
-        }, 500);
-    }
+function scrollImage() {
+    const block = document.querySelector('.block');
+    const firstImage = block.querySelector('div');
+    const imageWidth = firstImage.offsetWidth;
+    block.style.transform = `translateX(-${imageWidth}px)`;
+    setTimeout(() => {
+        block.appendChild(firstImage);
+        block.style.transform = 'translateX(0)';
+    }, 500);
+}
+
