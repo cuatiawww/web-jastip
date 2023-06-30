@@ -4,6 +4,7 @@ const katalog = document.getElementById('katalog');
 const detailProduct = document.getElementById('proDetails');
 const serviceByJastip = document.getElementById('serviceByJastip');
 const brand = document.getElementById('brandLogo');
+const liveJastip = document.getElementById('liveJastip');
 // Carousel
 fetch('./carousel.html').then(function(snap){
     snap.text().then(function(result){
@@ -35,16 +36,24 @@ fetch('./brand.html').then(function(snap){
         brand.innerHTML = result;
     })
 })
+fetch('./liveJastip.html').then(function(snap){
+    snap.text().then(function(result){
+        liveJastip.innerHTML = result;
+    })
+})
+
 
 // Brand
 setInterval(scrollImage, 3000);
 
-    function scrollImage() {
-        const block = document.querySelector('.block');
-        const firstImage = block.querySelector('img');
-        block.style.transform = `translateX(-${firstImage.offsetWidth}px)`;
-        setTimeout(() => {
-            block.appendChild(firstImage);
-            block.style.transform = 'translateX(0)';
-        }, 500);
-    }
+function scrollImage() {
+    const block = document.querySelector('.block');
+    const firstImage = block.querySelector('div');
+    const imageWidth = firstImage.offsetWidth;
+    block.style.transform = `translateX(-${imageWidth}px)`;
+    setTimeout(() => {
+        block.appendChild(firstImage);
+        block.style.transform = 'translateX(0)';
+    }, 500);
+}
+
