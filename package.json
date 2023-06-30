@@ -1,9 +1,6 @@
 {
   "dependencies": {
-    "animate.css": "^4.1.1",
-    "bootstrap": "^5.3.0",
-    "jquery": "^3.7.0",
-    "owl.carousel": "^2.3.4"
+    "bootstrap": "^5.3.0"
   },
   "name": "web-jastip",
   "version": "1.0.0",

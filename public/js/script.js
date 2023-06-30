@@ -37,23 +37,14 @@ fetch('./brand.html').then(function(snap){
 })
 
 // Brand
-$(document).ready(function(){
-    $('.owl-carousel').owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: true,
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 3
-            },
-            1000: {
-                items: 5
-            }
-        }
-    });
-});
+setInterval(scrollImage, 3000);
 
-
+    function scrollImage() {
+        const block = document.querySelector('.block');
+        const firstImage = block.querySelector('img');
+        block.style.transform = `translateX(-${firstImage.offsetWidth}px)`;
+        setTimeout(() => {
+            block.appendChild(firstImage);
+            block.style.transform = 'translateX(0)';
+        }, 500);
+    }
