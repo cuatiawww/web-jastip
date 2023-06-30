@@ -313,6 +313,10 @@ body {
   }
 } */
 /* Header */
+header h3{
+  font-weight: 500;
+  font-size: 32px;
+}
 .masthead {
   min-height: 30rem;
   position: relative;
@@ -742,6 +746,18 @@ h6 {
   background: rgba(52, 58, 64, 0.5);
 }
 
+/* LIVE JASTIP */
+.match-height {
+  transition: transform 0.3s ease;
+  border-radius: 25px;
+}
+
+.match-height:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+
 /* FOOTER */
 .footer {
   padding: 60px 0px;
@@ -752,6 +768,24 @@ h6 {
   color: rgba(255, 255, 255, 0.5);
   text-transform: capitalize;
 }
+.footer .footer-menu {
+  margin-top: 30px;
+}
+
+.footer .footer-menu li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.footer .footer-menu li a {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+}
+.footer p{
+  color: rgba(255, 255, 255, 0.5);
+}
+
+
 
 
 
