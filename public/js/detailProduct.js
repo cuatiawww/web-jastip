@@ -92,6 +92,17 @@ const items = [
         price: "Rp180.000",
         store: "Jump Comics",
         details:"One Piece comic volume 105 contains 10 chapters, starting from chapter 1056 titled 'CROSS GUILD' to chapter 1065 entitled 'Six Vegapunk'. Some of the upgrades on the cover of volume 105 include: Luffy changes to Gear Five mode, Buggy wears a bigger hat and joins the Cross Guid, while Teach also wears a big hat and has a bushy beard, plus he also has the Gura Gura no Mi ability. stolen from Whitebeard."
+    },
+    {
+        id: 8,
+        image: "Mi-clock.jpg",
+        smallimg: "Mi-clock2.jpg",
+        smallimg1: "Mi-clock3.jpg",
+        smallimg2: "Mi-clock4.jpg",
+        title: "Mi Smart Clock",
+        price: "Rp420.000",
+        store: "Xiaomi",
+        details: "With the simple design and pure white cover, the compact Mi Smart Clock blends perfectly into any room. With help from Google, waking up and getting ready for bed have never been easier. Play your favorite music, podcast, or radio show from Youtube Music or Spotify directly on Mi Smart Clock. Talk to Google on your Mi Smart Clock for hands-free help. Use your voice to set an alarm, get answers, check the weather, play music, and more. Just say “Ok Google” to get started. Connect to your other IoT devices and use Mi Smart Clock as a control center. Connect Mi Smart Clock to a smart camera to see what the camera is recording directly on the clock screen."
     }
 ];
 
