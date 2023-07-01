@@ -17,81 +17,93 @@
             transition: all .2s linear;
         }
     </style>
+    <link
+    rel="stylesheet"
+    href="../node_modules/bootstrap/dist/css/bootstrap.css"
+  />
 </head>
 <body>
-    
     <div class="payment">
-        <form onsubmit="sendWhatsAppMessage(); return false;">
-            <h3 class="title">Payment</h3>
-    
-            <div class="row">
-                <div class="col">
-                    <div class="inputBox">
-                        <span>Username</span>
-                        <input type="text" placeholder="name" name="username">
-                    </div>
-                    <div class="inputBox">
-                        <span>Email</span>
-                        <input type="text" placeholder="email" name="email">
-                    </div>
-                    <div class="inputBox">
-                        <span>Address</span>
-                        <input type="text" placeholder="address" name="address">
-                    </div>
-                    <div class="inputBox">
-                        <span>City</span>
-                        <input type="text" placeholder="city" name="city">
-                    </div>
-    
-                    <div class="flex">
-                        <div class="inputBox">
-                            <span>State</span>
-                            <input type="text" placeholder="state" name="state">
+        <div class="card bg-dark text-white rounded-5">
+            <div class="card-body">
+                <form onsubmit="sendWhatsAppMessage(); return false;" >
+                <div class="d-grid col-12 mx-auto bg-black text-white p-4 rounded-5">
+                    <header>
+                        <h3 class="title" style="color: white;">Payment Form</h3>
+                    </header>
+                    <div class="row ">
+                        <div class="col">
+                            <div class="inputBox">
+                                <span>Username</span>
+                                <input type="text" placeholder="name" name="username"
+                                class="form-control bg-dark text-white">
+                            </div>
+                            <div class="inputBox">
+                                <span>Email</span>
+                                <input type="text" placeholder="email" name="email"
+                                class="form-control bg-dark text-white">
+                            </div>
+                            <div class="inputBox">
+                                <span>Address</span>
+                                <input type="text" placeholder="address" name="address" class="form-control bg-dark text-white">
+                            </div>
+                            <div class="inputBox">
+                                <span>City</span>
+                                <input type="text" placeholder="city" name="city" class="form-control bg-dark text-white">
+                            </div>
+            
+                            <div class="flex">
+                                <div class="inputBox">
+                                    <span>State</span>
+                                    <input type="text" placeholder="state" name="state" class="form-control bg-dark text-white">
+                                </div>
+                                <div class="inputBox">
+                                    <span>Zip code</span>
+                                    <input type="text" placeholder="Zip code" name="zipcode" class="form-control bg-dark text-white">
+                                </div>
+                            </div>
+                            <div class="inputBox">
+                                <span>Item code</span>
+                                <input type="text" placeholder="kode barang" name="kodeBarang" style="width: 50%;" class="form-control bg-dark text-white">
+                            </div>
+                           
                         </div>
-                        <div class="inputBox">
-                            <span>Zip code</span>
-                            <input type="text" placeholder="Zip code" name="zipcode">
+            
+                        <div class="col">
+                            <div class="inputBox">
+                                <span>Payment Method</span>
+                                <img class="methodPay" src="../assets/img/metodePayment.png" alt="">
+                            </div>
+                            <div class="inputBox">
+                                <span>Name on card</span>
+                                <input type="text" placeholder="name on card" name="cardname" class="form-control bg-dark text-white">
+                            </div>
+                            <div class="inputBox">
+                                <span>Credit card number</span>
+                                <input type="number" placeholder="credit card number" name="cardnumber" class="form-control bg-dark text-white">
+                            </div>
+                            <div class="inputBox">
+                                <span>Exp month</span>
+                                <input type="text" placeholder="exp month" name="expmonth" class="form-control bg-dark text-white">
+                            </div>
+                            <div class="flex">
+                                <div class="inputBox">
+                                    <span>exp year</span>
+                                    <input type="number" placeholder="exp year" name="expyear" class="form-control bg-dark text-white">
+                                </div>
+                                <div class="inputBox">
+                                    <span>CVV</span>
+                                    <input type="text" placeholder="CVV" name="cvv" class="form-control bg-dark text-white">
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="inputBox">
-                        <span>Kode barang</span>
-                        <input type="text" placeholder="kode barang" name="kodebarang" style="width: 50%;">
-                    </div>
-                   
                 </div>
-    
-                <div class="col">
-                    <div class="inputBox">
-                        <span>Payment Method</span>
-                        <img class="methodPay" src="../assets/img/metodePayment.png" alt="">
-                    </div>
-                    <div class="inputBox">
-                        <span>Name on card</span>
-                        <input type="text" placeholder="name on card" name="cardname">
-                    </div>
-                    <div class="inputBox">
-                        <span>Credit card number</span>
-                        <input type="number" placeholder="credit card number" name="cardnumber">
-                    </div>
-                    <div class="inputBox">
-                        <span>Exp month</span>
-                        <input type="text" placeholder="exp month" name="expmonth">
-                    </div>
-                    <div class="flex">
-                        <div class="inputBox">
-                            <span>exp year</span>
-                            <input type="number" placeholder="exp year" name="expyear">
-                        </div>
-                        <div class="inputBox">
-                            <span>CVV</span>
-                            <input type="text" placeholder="CVV" name="cvv">
-                        </div>
-                    </div>
-                </div>
-            </div>
-    
-            <input type="submit" value="Buat Pesanan" class="submit-btn normal">
-        </form> 
+        
+                <input type="submit" value="Buat Pesanan" class="submit-btn normal">
+            </form> 
+        </div>
+        </div>
     </div>
     <script src="./js/paymentForm.js"></script>
 </body>

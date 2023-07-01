@@ -54,12 +54,21 @@
   color: #000;
   border: 2px solid ;
 }
-.img-card:hover {
+.card:hover .img-card{
   border: 2px solid ;
   border-color: black;
 }
-
-
+@media screen and (max-width: 767px) {
+  .container-team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .column {
+    width: 100%;
+    margin-bottom: 1.5em;
+  }
+}
 </style>
 <header class="pt-5 text-center pb-5">
     <h3>Our Team</h3>
