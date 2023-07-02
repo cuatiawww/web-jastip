@@ -11,7 +11,7 @@ DJastip siap memberikan pengalaman jastip yang terpercaya, nyaman, dan mudah. Sl
 - Menawarkan opsi pembayaran yang lebih banyak
 - Menampilkan produk sesuai kategori 
 - Informasi event-event dengan diskon besar-besaran
-- Data pemesanan terintegrasi dengan url whatsapp
+- Responsif 
 
 ## Build With
 
@@ -21,15 +21,18 @@ DJastip siap memberikan pengalaman jastip yang terpercaya, nyaman, dan mudah. Sl
 ![bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 
 
-## Starter
+## Installation
 
 - clone ke lokal mesin
 
 ```
-git clone <your repo>
+git clone <nama repo>
 ```
-
-- Menginstall package
+- pregi ke direkrtori projek
+```
+cd <nama proyek>
+```
+- Install dependensi
 ```
 npm init -y
 ```
@@ -38,5 +41,24 @@ npm init -y
 npm install bootstrap mdb-ui-kit font-awesome
 ```
 
-- Menyiapkan server untuk menjalankan program
+Start server
 
+```bash
+  npm run start
+```
+
+
+- Menyiapkan server untuk menjalankan program
+## Design Website
+- [ini link figma](https://www.figma.com/file/O27KZhROeO2XkCKiyTGX3g/web-jastip?type=design&node-id=6%3A1015&mode=design&t=mYfikfqOhpHniOPw-1)
+
+## Authors
+
+- [@cuatiawww](https://www.github.com/cuatiawww)
+- [@yonathanfrans](https://github.com/yonathanfrans)
+- [@prakasfl](https://github.com/)
+- [@destrio](https://github.com/)
+
+
+## Next Update DJastip ver 0.0.0.0.0.2
+- Produk menggunakan database
