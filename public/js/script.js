@@ -107,19 +107,19 @@ window.addEventListener("scroll", function() {
 //     });
 
 // Brand Animasi
-// setInterval(scrollImage, 3000);
+setInterval(scrollImage, 3000);
 
-// function scrollImage() {
-//     const block = document.querySelector('.block');
-//     const firstImage = block.querySelector('div');
-//     const imageWidth = firstImage.offsetWidth;
-//     block.style.transform = `translateX(-${imageWidth}px)`;
-//     setTimeout(() => {
-//         block.appendChild(firstImage);
-//         block.style.transform = 'translateX(0)';
-//     }, 500);
-// }
-
+function scrollImage() {
+    const block = document.querySelector('.block');
+    const firstImage = block.querySelector('div');
+    const imageWidth = firstImage.offsetWidth;
+    block.style.transform = `translateX(-${imageWidth}px)`;
+    setTimeout(() => {
+        block.appendChild(firstImage);
+        block.style.transform = 'translateX(0)';
+    }, 500);
+}
+//Membuat function search ketika diinput oleh user dan menampilkan produk berdasarkan nama produk dari inputan user 
 function search() {
     let searchInput = document.getElementById("searchInput").value.toLowerCase();
   
