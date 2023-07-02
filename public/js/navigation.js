@@ -2,7 +2,6 @@ window.addEventListener('DOMContentLoaded', event => {
 
     const sidebarWrapper = document.getElementById('sidebar-wrapper');
     let scrollToTopVisible = false;
-    // Closes the sidebar 
     const menuToggle = document.body.querySelector('.menu-toggle');
     menuToggle.addEventListener('click', event => {
         event.preventDefault();
@@ -11,8 +10,7 @@ window.addEventListener('DOMContentLoaded', event => {
         menuToggle.classList.toggle('active');
     })
 
-    // Closes responsive menu when a scroll trigger link is clicked
-    var scrollTriggerList = [].slice.call(document.querySelectorAll('#sidebar-wrapper .js-scroll-trigger'));
+    let scrollTriggerList = [].slice.call(document.querySelectorAll('#sidebar-wrapper .js-scroll-trigger'));
     scrollTriggerList.map(scrollTrigger => {
         scrollTrigger.addEventListener('click', () => {
             sidebarWrapper.classList.remove('active');
@@ -66,10 +64,11 @@ function fadeIn(el, display) {
     el.style.opacity = 0;
     el.style.display = display || "block";
     (function fade() {
-        var val = parseFloat(el.style.opacity);
+        let val = parseFloat(el.style.opacity);
         if (!((val += .1) > 1)) {
             el.style.opacity = val;
             requestAnimationFrame(fade);
         }
     })();
 };
+

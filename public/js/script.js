@@ -7,6 +7,8 @@ const brand = document.getElementById('brandLogo');
 const liveJastip = document.getElementById('liveJastip');
 const ourTeam = document.getElementById('ourTeam');
 const footer = document.getElementById('footer');
+const katalogWomen = document.getElementById('item-container2');
+const katalogMen = document.getElementById('item-container3');
 // Carousel
 fetch('./carousel.html').then(function(snap){
     snap.text().then(function(result){
@@ -53,19 +55,93 @@ fetch('./footer.html').then(function(snap){
         footer.innerHTML = result;
     })
 })
+fetch('../../public/kategori/katalogWomen.html')
+    .then(function(response) {
+        return response.text();
+    })
+    .then(function(result) {
+        var tempDiv = document.createElement('div');
+        tempDiv.innerHTML = result;
+        // Memasukkan konten ke dalam elemen
+        let katalogWomenItems = tempDiv.querySelectorAll('#katalogWomen');
+        // katalogWomen.innerHTML = result;
+        katalogWomenItems.forEach(function(item) {
+            katalogWomen.appendChild(item.cloneNode(true));
+        });
+    })
+    .catch(function(error) {
+        console.log('Terjadi kesalahan:', error);
+    });
+fetch('../../public/kategori/katalogMen.html')
+    .then(function(response) {
+        return response.text();
+    })
+    .then(function(result) {
+        var tempDiv = document.createElement('div');
+        tempDiv.innerHTML = result;
+        // Memasukkan konten ke dalam elemen
+        let katalogMenItems = tempDiv.querySelectorAll('#katalogMen');
+        // katalogMen.innerHTML = result;
+        katalogMenItems.forEach(function(item) {
+            katalogMen.appendChild(item.cloneNode(true));
+        });
+    })
+    .catch(function(error) {
+        console.log('Terjadi kesalahan:', error);
+    });
+
 
 
 // Brand
-setInterval(scrollImage, 3000);
+// setInterval(scrollImage, 3000);
 
-function scrollImage() {
-    const block = document.querySelector('.block');
-    const firstImage = block.querySelector('div');
-    const imageWidth = firstImage.offsetWidth;
-    block.style.transform = `translateX(-${imageWidth}px)`;
-    setTimeout(() => {
-        block.appendChild(firstImage);
-        block.style.transform = 'translateX(0)';
-    }, 500);
-}
+// function scrollImage() {
+//     const block = document.querySelector('.block');
+//     const firstImage = block.querySelector('div');
+//     const imageWidth = firstImage.offsetWidth;
+//     block.style.transform = `translateX(-${imageWidth}px)`;
+//     setTimeout(() => {
+//         block.appendChild(firstImage);
+//         block.style.transform = 'translateX(0)';
+//     }, 500);
+// }
+
+function search() {
+    let searchInput = document.getElementById("searchInput").value.toLowerCase();
+  
+    // Pindah ke halaman produk.html dengan parameter pencarian
+    window.location.href ="./katalogSearch.html"+"?search=" + encodeURIComponent(searchInput);
+  }
+  
+// Fungsi untuk mendapatkan nilai parameter pencarian dari URL
+function getSearchParameter() {
+    let urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get("search");
+  }
+  
+  // Fungsi untuk melakukan pencarian pada elemen-elemen produk
+  function performSearch() {
+    let searchInput = getSearchParameter();
+  
+    // Dapatkan semua elemen dengan kelas "pro"
+    let items = document.getElementsByClassName("card");
+  
+    // Loop melalui semua elemen dan sembunyikan yang tidak sesuai
+    for (let i = 0; i < items.length; i++) {
+      let item = items[i];
+      let title = item.getElementsByTagName("h5")[0].innerText.toLowerCase();
+  
+      if (title.includes(searchInput)) {
+        item.style.display = "block";
+      } else {
+        item.style.display = "none";
+      }
+    }
+  }
+  
+  // Panggil fungsi performSearch saat halaman selesai dimuat
+  window.addEventListener("load", performSearch);
+
+//   ANIMASI
+  
 

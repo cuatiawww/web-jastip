@@ -167,6 +167,34 @@ body {
     max-width: 1320px;
   }
 }
+/* ANIMASI */
+
+
+/* SEARCH BAR */  
+.search-bar {
+  position: relative;
+  border-radius: 20px !important;
+  border: 1px solid #e7e7e8;
+  background-color: #090909;
+}
+.search-bar input:focus {
+  background-color: #090909; /* Change background color when focused */
+}
+
+.search-bar .input-group-prepend {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  border:none !important;
+  border-radius: 0 20px 20px 0 !important;
+  color: #fff !important;
+}
+
+.search-bar .form-control {
+  padding-left: 2.5rem; /* Atur jarak kiri sesuai lebar ikon */
+}
+
 /* BUTTON */
 .btn-primary {
   background: #ecbb1c;
@@ -295,6 +323,17 @@ body {
   width: 250px;
   transition: all 0.4s ease 0s;
 }
+.sidebar-brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.sidebar-brand img {
+  max-width: 100%;
+  height: auto;
+}
 
 .menu-toggle {
   position: fixed;
@@ -370,16 +409,17 @@ header h3{
   height: auto;
   padding-top: 8rem;
   padding-bottom: 8rem;
-  background: linear-gradient(
+  /* background: linear-gradient(
       90deg,
       rgba(255, 255, 255, 0.1) 0%,
       rgba(255, 255, 255, 0.1) 100%
-    ), 
-    url("../../assets/bg-masthead.jpg");
-    background-color:
+    );  */
+    /* url("../../assets/bg-masthead.jpg"); */
+    background-color: #080404;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  color: #fff;
 }
 .masthead h1,
 .masthead .h1 {

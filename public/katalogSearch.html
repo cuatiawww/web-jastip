@@ -2,12 +2,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JASTIP</title>
+    <title>JASTIP by SIM</title>
     <!-- Font Awesome icons (free version)-->
     <script
       src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Simple line icons-->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css"
@@ -23,35 +24,36 @@
       rel="stylesheet"
       type="text/css"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,100;1,700&display=swap" rel="stylesheet">
     <!-- Bootstrap -->
     <link
       rel="stylesheet"
-      href="../../node_modules/bootstrap/dist/css/bootstrap.css"
+      href="../node_modules/bootstrap/dist/css/bootstrap.css"
     />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <!-- MDB -->
-    <link rel="stylesheet" href="../../node_modules/mdb/css/mdb.min.css" />
+    <link rel="stylesheet" href="../node_modules/mdb/css/mdb.min.css" />
   </head>
   <body onload="randomKodeBrg()">
     <!-- Navigation -->
-    <a class="menu-toggle rounded" href="../index.html"
+    <a class="menu-toggle rounded" href="./index.html"
       ><i class="fa-solid fa-chevron-left"></i
     ></a>
 
     <div class="mb-4" style="background-color: #ecbb1c">
       <div class="container py-4">
-        <h3 class="text-white mt-2">Women's</h3>
+        <h3 class="text-white mt-2">Related Products</h3>
         <!-- Breadcrumb -->
         <nav class="d-flex mb-2">
           <h6 class="mb-0">
-            <a href="../index.html" class="text-white-50">Home</a>
+            <a href="./index.html" class="text-white-50">Home</a>
             <span class="text-white-50 mx-2"> > </span>
-            <a href="" class="text-white"><u>Women's</u></a>
+            <a href="" class="text-white"><u>All Item's</u></a>
           </h6>
         </nav>
         <!-- Breadcrumb -->
@@ -72,8 +74,8 @@
             </select>
           </div>
         </header>
-      <div id="katalogWomen">
-        <div class="row justify-content-center mb-3">
+
+        <div id="item-container" class="row justify-content-center mb-3">
           <div class="col-md-12">
             <div class="card shadow-0 border rounded-3">
               <div class="card-body">
@@ -82,7 +84,7 @@
                     <div
                       class="bg-image hover-zoom ripple rounded ripple-surface me-md-3 mb-3 mb-md-0"
                     >
-                      <img src="../../assets/img/d1.jpg" class="w-100" />
+                      <img src="../../assets/img/glove.jpg" class="w-100" />
                       <a href="#!">
                         <div class="hover-overlay">
                           <div
@@ -93,32 +95,32 @@
                       </a>
                     </div>
                   </div>
-                  <div class="col-xl-6 col-md-5 col-sm-7">
-                    <h5>Astrid Textured Slit Dress Black</h5>
-                    <h6 class="text-muted">Item code : <span class="kodeBrg" data-index="file7"></span></h6>
+                  <div class="product-full col-xl-6 col-md-5 col-sm-7">
+                    <h5 class="product-title">UFC Official Fight Glove</h5>
+                    <h6 class="text-muted">Item code : <span class="kodeBrg" data-index="file8"></span></h6>
                     <div class="d-flex flex-row">
                       <div class="text-warning mb-1 me-2">
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                        <span class="ms-1"> 4.5 </span>
+                        <i class="fa fa-star"></i>
+                        <span class="ms-1"> 5 </span>
                       </div>
-                      <span class="text-muted">94 orders</span>
+                      <span class="text-muted">554 orders</span>
                     </div>
 
                     <p class="text mb-4 mb-md-0">
-                      Made of textured polyester elastane blend. Lined; until slit opening. Slight stretch. Concealed back zip. Slide slit (approx 17").
+                        The official fight glove used by all UFC fighters, this is a highly sought after glove. Pre-curved, anatomically correct design offers a secure and comfortable fit. Layered gel protection over the knuckles with open finger design, gives you more flexibility and free range of motion. Made of high-quality premium leather. Features propriety dual-locking closure system for premium wrist support without sacrificing comfort.
                     </p>
                   </div>
                   <div class="col-xl-3 col-md-3 col-sm-5">
                     <div class="d-flex flex-row align-items-center mb-1">
-                      <h4 class="mb-1 me-1">Rp534.000</h4>
-                      <span class="text-danger"><s>Rp743.000</s></span>
+                      <h4 class="mb-1 me-1">Rp884.000</h4>
+                      <span class="text-danger"><s>Rp1.804.000</s></span>
                     </div>
                     <div class="mt-4">
-                      <button class="btn btn-primary shadow-0" type="button" onclick="pesanan('../paymentForm.html')">
+                      <button class="btn btn-primary shadow-0" type="button" onclick="pesanan('./paymentForm.html')">
                         Buy This
                       </button>
                     </div>
@@ -129,7 +131,7 @@
           </div>
         </div>
 
-        <div class="row justify-content-center mb-3">
+        <div id="item-container" class="row justify-content-center mb-3">
           <div class="col-md-12">
             <div class="card shadow-0 border rounded-3">
               <div class="card-body">
@@ -138,7 +140,7 @@
                     <div
                       class="bg-image hover-zoom ripple rounded ripple-surface me-md-3 mb-3 mb-md-0"
                     >
-                      <img src="../../assets/img/s6.jpg" class="w-100" />
+                      <img src="../../assets/img/panda-hat.jpg" class="w-100" />
                       <a href="#!">
                         <div class="hover-overlay">
                           <div
@@ -149,9 +151,9 @@
                       </a>
                     </div>
                   </div>
-                  <div class="col-xl-6 col-md-5 col-sm-7">
-                    <h5>Jimmy Choo Hitch 100 Sandals</h5>
-                    <h6 class="text-muted">Item code : <span class="kodeBrg" data-index="file7"></span></h6>
+                  <div class="product-full col-xl-6 col-md-5 col-sm-7">
+                    <h5 class="product-title">Panda Bunny Hat</h5>
+                    <h6 class="text-muted">Item code : <span class="kodeBrg" data-index="file8"></span></h6>
                     <div class="d-flex flex-row">
                       <div class="text-warning mb-1 me-2">
                         <i class="fa fa-star"></i>
@@ -165,17 +167,17 @@
                     </div>
 
                     <p class="text mb-4 mb-md-0">
-                      Hitch 100 sandals from Jimmy Choo feature a contemporary caged design that show off the shape of the foot with its cut out details. Securely fastened with a tie fastening, these stand-out Hitch sandals are finished with a luxurious leather brand embossed insole and a leather insole whilst the striking 100mm high stiletto heel elongates the leg.
+                        Rabbit Hat Dance is a dancing hat, and when you press the paws, because there is an air bag inside, the ears can stand up like a dance. The hat is made of very fine and soft luxurious material. suitable for girlfriend gifts, birthdays, souvenirs.
                     </p>
                   </div>
                   <div class="col-xl-3 col-md-3 col-sm-5">
                     <div class="d-flex flex-row align-items-center mb-1">
-                      <h4 class="mb-1 me-1">Rp4.340.000</h4>
-                      <span class="text-danger"><s>Rp6.270.000</s></span>
+                      <h4 class="mb-1 me-1">Rp33.000</h4>
+             
                     </div>
 
                     <div class="mt-4">
-                      <button class="btn btn-primary shadow-0" type="button" onclick="pesanan('../paymentForm.html')">
+                      <button class="btn btn-primary shadow-0" type="button" onclick="pesanan('./paymentForm.html')">
                         Buy This
                       </button>
                     </div>
@@ -186,7 +188,7 @@
           </div>
         </div>
 
-        <div class="row justify-content-center mb-3">
+        <div id="item-container" class="row justify-content-center mb-3">
           <div class="col-md-12">
             <div class="card shadow-0 border rounded-3">
               <div class="card-body">
@@ -195,7 +197,7 @@
                     <div
                       class="bg-image hover-zoom ripple rounded ripple-surface me-md-3 mb-3 mb-md-0"
                     >
-                      <img src="../../assets/img/tas1.jpg" class="w-100" />
+                      <img src="../../assets/img/f1.png" class="w-100" />
                       <a href="#!">
                         <div class="hover-overlay">
                           <div
@@ -206,64 +208,9 @@
                       </a>
                     </div>
                   </div>
-                  <div class="col-xl-6 col-md-5 col-sm-7">
-                    <h5>Slingbag Chanel Flap Medium Black Caviar</h5>
-                    <h6 class="text-muted">Item code : <span class="kodeBrg" data-index="file7"></span></h6>
-                    <div class="d-flex flex-row">
-                      <div class="text-warning mb-1 me-2">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <span class="ms-1"> 4 </span>
-                      </div>
-                      <span class="text-muted">91 orders</span>
-                    </div>
-
-                    <p class="text mb-4 mb-md-0">
-                      A Chanel Timeless Classic crafted from Black Caviar leather. The structured silhouette offers plenty of space for your wallet, phone and keys. Produced in 2017. Chanel's medium-sized design effortlessly transitions from day to night - carry it from brunch dates to the office, to dinner beyond.
-                    </p>
-                  </div>
-                  <div class="col-xl-3 col-md-3 col-sm-5">
-                    <div class="d-flex flex-row align-items-center mb-1">
-                      <h4 class="mb-1 me-1">Rp3.504.000</h4>
-                    </div>
-                    <div class="mt-4">
-                      <button class="btn btn-primary shadow-0" type="button" onclick="pesanan('../paymentForm.html')">
-                        Buy This
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row justify-content-center mb-3">
-          <div class="col-md-12">
-            <div class="card shadow-0 border rounded-3">
-              <div class="card-body">
-                <div class="row g-0">
-                  <div class="col-xl-3 col-md-4 d-flex justify-content-center">
-                    <div
-                      class="bg-image hover-zoom ripple rounded ripple-surface me-md-3 mb-3 mb-md-0"
-                    >
-                      <img src="../../assets/img/j2.jpg" class="w-100" />
-                      <a href="#!">
-                        <div class="hover-overlay">
-                          <div
-                            class="mask"
-                            style="background-color: rgba(253, 253, 253, 0.15)"
-                          ></div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="col-xl-6 col-md-5 col-sm-7">
-                    <h5>Jacket FTH x EVOS "Let The Roar Begins"</h5>
-                    <h6 class="text-muted">Item code : <span class="kodeBrg" data-index="file7"></span></h6>
+                  <div class="product-full col-xl-6 col-md-5 col-sm-7">
+                    <h5 class="product-title">Pop Guardians of The Galaxy Vol 2</h5>
+                    <h6 class="text-muted">Item code : <span class="kodeBrg" data-index="file8"></span></h6>
                     <div class="d-flex flex-row">
                       <div class="text-warning mb-1 me-2">
                         <i class="fa fa-star"></i>
@@ -273,20 +220,19 @@
                         <i class="fas fa-star-half-alt"></i>
                         <span class="ms-1"> 4.5 </span>
                       </div>
-                      <span class="text-muted">84 orders</span>
+                      <span class="text-muted">91 orders</span>
                     </div>
 
                     <p class="text mb-4 mb-md-0">
-                      Faith Industries (FTH) is collaborating again this time with the EVOS Esports organization to release its newest capsule collection. This capsule collection follows many of the EVOS Esports elements with its color palette which includes black, white and blue tones.
+                        This figure from the Guardians of the Galaxy 2 movie stands 3 3/4 tall and boasts the stylized perfect for any Marvel fan! urban design that have made these figures fan-favorites!From Guardians of The Galaxy, Star Lord CHASE Version, as a stylized POP vinyl from Funko! 
                     </p>
                   </div>
                   <div class="col-xl-3 col-md-3 col-sm-5">
                     <div class="d-flex flex-row align-items-center mb-1">
-                      <h4 class="mb-1 me-1">Rp934.000</h4>
-                      <span class="text-danger"><s>Rp1.463.000</s></span>
+                      <h4 class="mb-1 me-1">Rp480.000</h4>
                     </div>
                     <div class="mt-4">
-                      <button class="btn btn-primary shadow-0" type="button" onclick="pesanan('../paymentForm.html')">
+                      <button class="btn btn-primary shadow-0" type="button" onclick="pesanan('./paymentForm.html')">
                         Buy This
                       </button>
                     </div>
@@ -297,7 +243,7 @@
           </div>
         </div>
 
-        <div class="row justify-content-center mb-3">
+        <div id="item-container" class="row justify-content-center mb-3">
           <div class="col-md-12">
             <div class="card shadow-0 border rounded-3">
               <div class="card-body">
@@ -306,7 +252,7 @@
                     <div
                       class="bg-image hover-zoom ripple rounded ripple-surface me-md-3 mb-3 mb-md-0"
                     >
-                      <img src="../../assets/img/skincare.jpg" class="w-100" />
+                      <img src="../../assets/img/hand-warmer.jpg" class="w-100" />
                       <a href="#!">
                         <div class="hover-overlay">
                           <div
@@ -317,9 +263,9 @@
                       </a>
                     </div>
                   </div>
-                  <div class="col-xl-6 col-md-5 col-sm-7">
-                    <h5>Ms Glow Whitening Original</h5>
-                    <h6 class="text-muted">Item code : <span class="kodeBrg" data-index="file7"></span></h6>
+                  <div class="product-full col-xl-6 col-md-5 col-sm-7">
+                    <h5 class="product-title">Hand Warmer</h5>
+                    <h6 class="text-muted">Item code : <span class="kodeBrg" data-index="file8"></span></h6>
                     <div class="d-flex flex-row">
                       <div class="text-warning mb-1 me-2">
                         <i class="fa fa-star"></i>
@@ -329,20 +275,20 @@
                         <i class="far fa-star"></i>
                         <span class="ms-1"> 4 </span>
                       </div>
-                      <span class="text-muted">72 orders</span>
+                      <span class="text-muted">47 orders</span>
                     </div>
 
                     <p class="text mb-4 mb-md-0">
-                      Formulated for normal or dry skin, it makes white skin glow healthy all day long. Consists of 4 facial wash products, toner, whitening day cream, and whitening night cream with pouch bag packaging.
+                        Are you looking for a comfortable and portable source of heat able to fit in the palm of your hand? Our air-activated Grabber® Hand Warmers keep hands and fingers toasty for up to 10 hours! No shaking or kneading is required; just open the package and put the "Original" Warmers in your glove or pocket for a few minutes to start the process.
                     </p>
                   </div>
                   <div class="col-xl-3 col-md-3 col-sm-5">
                     <div class="d-flex flex-row align-items-center mb-1">
-                      <h4 class="mb-1 me-1">Rp300.000</h4>
-                   
+                      <h4 class="mb-1 me-1">Rp19.000</h4>
+                 
                     </div>
                     <div class="mt-4">
-                      <button class="btn btn-primary shadow-0" type="button" onclick="pesanan('../paymentForm.html')">
+                      <button class="btn btn-primary shadow-0" type="button" onclick="pesanan('./paymentForm.html')">
                         Buy This
                       </button>
                     </div>
@@ -352,8 +298,13 @@
             </div>
           </div>
         </div>
+        <div id="item-container2"></div>
+        <div id="item-container3"></div>
       </div>
-      </div>
+      
+    </section>
+    <section >
+
     </section>
     <hr />
 
@@ -368,7 +319,7 @@
             <span aria-hidden="true">&laquo;</span>
           </a>
         </li>
-        <li class="page-item active"><a class="page-link" href="./katalogBook.html">1</a></li>
+        <li class="page-item active"><a class="page-link" href="./katalogSearch.html">1</a></li>
         <li class="page-item"><a class="page-link" href="#">2</a></li>
         <li class="page-item"><a class="page-link" href="#">3</a></li>
         <li class="page-item"><a class="page-link" href="#">4</a></li>
@@ -380,10 +331,13 @@
         </li>
       </ul>
     </nav>
-   <!-- footer -->
-   <section class="footer" id="footer-kategori"></section>
-   <script src="../js/detailProduct.js"></script>
-   <script src="../js/randomkodeBrg.js"></script>
-   <script src="./footer.js"></script>
+    <!-- footer -->
+    <section class="footer" id="footer-kategori"></section>
+    <script src="./js/detailProduct.js"></script>
+    <script src="./js/randomkodeBrg.js"></script>
+    <script src="./footer.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/navigation.js"></script>
   </body>
 </html>
+
