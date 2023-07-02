@@ -1,3 +1,4 @@
+//ketika tombol logout diklik maka akan menampilkan alert 'Berhasil Logout' lalu akan pindah kehalaman login.html
 const logoutButton = document.getElementById('logoutButton');
 logoutButton.addEventListener('click', () => {
   firebase

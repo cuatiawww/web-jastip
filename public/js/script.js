@@ -1,4 +1,3 @@
-const carousel = document.getElementById('carousel');
 const kategori = document.getElementById('kategori');
 const katalog = document.getElementById('katalog');
 const detailProduct = document.getElementById('proDetails');
@@ -10,6 +9,9 @@ const footer = document.getElementById('footer');
 const katalogWomen = document.getElementById('item-container2');
 const katalogMen = document.getElementById('item-container3');
 // Carousel
+// Mengambil file html('./carousel.html) lalu dimasukkan ke dalam index.html  yang memiliki id 'carousel'
+// Ini berfungsi agar kode html tidak menumpuk di 1 file
+const carousel = document.getElementById('carousel');
 fetch('./carousel.html').then(function(snap){
     snap.text().then(function(result){
         carousel.innerHTML = result;
@@ -58,8 +60,8 @@ fetch('./footer.html').then(function(snap){
 
 // HEADER
 window.addEventListener("scroll", function() {
-    var header = document.querySelector(".header-component");
-    var scrollPosition = window.pageYOffset;
+    let header = document.querySelector(".header-component");
+    let scrollPosition = window.pageYOffset;
 
     if (scrollPosition > 0) {
       header.classList.add("floating-header");
