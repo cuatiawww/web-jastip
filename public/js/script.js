@@ -55,44 +55,43 @@ fetch('./footer.html').then(function(snap){
         footer.innerHTML = result;
     })
 })
-fetch('../../public/kategori/katalogWomen.html')
-    .then(function(response) {
-        return response.text();
-    })
-    .then(function(result) {
-        var tempDiv = document.createElement('div');
-        tempDiv.innerHTML = result;
-        // Memasukkan konten ke dalam elemen
-        let katalogWomenItems = tempDiv.querySelectorAll('#katalogWomen');
-        // katalogWomen.innerHTML = result;
-        katalogWomenItems.forEach(function(item) {
-            katalogWomen.appendChild(item.cloneNode(true));
-        });
-    })
-    .catch(function(error) {
-        console.log('Terjadi kesalahan:', error);
-    });
-fetch('../../public/kategori/katalogMen.html')
-    .then(function(response) {
-        return response.text();
-    })
-    .then(function(result) {
-        var tempDiv = document.createElement('div');
-        tempDiv.innerHTML = result;
-        // Memasukkan konten ke dalam elemen
-        let katalogMenItems = tempDiv.querySelectorAll('#katalogMen');
-        // katalogMen.innerHTML = result;
-        katalogMenItems.forEach(function(item) {
-            katalogMen.appendChild(item.cloneNode(true));
-        });
-    })
-    .catch(function(error) {
-        console.log('Terjadi kesalahan:', error);
-    });
+// FITUR REALEATED PRODUCT
+// fetch('../../public/kategori/katalogWomen.html')
+//     .then(function(response) {
+//         return response.text();
+//     })
+//     .then(function(result) {
+//         var tempDiv = document.createElement('div');
+//         tempDiv.innerHTML = result;
+//         // Memasukkan konten ke dalam elemen
+//         let katalogWomenItems = tempDiv.querySelectorAll('#katalogWomen');
+//         // katalogWomen.innerHTML = result;
+//         katalogWomenItems.forEach(function(item) {
+//             katalogWomen.appendChild(item.cloneNode(true));
+//         });
+//     })
+//     .catch(function(error) {
+//         console.log('Terjadi kesalahan:', error);
+//     });
+// fetch('../../public/kategori/katalogMen.html')
+//     .then(function(response) {
+//         return response.text();
+//     })
+//     .then(function(result) {
+//         var tempDiv = document.createElement('div');
+//         tempDiv.innerHTML = result;
+//         // Memasukkan konten ke dalam elemen
+//         let katalogMenItems = tempDiv.querySelectorAll('#katalogMen');
+//         // katalogMen.innerHTML = result;
+//         katalogMenItems.forEach(function(item) {
+//             katalogMen.appendChild(item.cloneNode(true));
+//         });
+//     })
+//     .catch(function(error) {
+//         console.log('Terjadi kesalahan:', error);
+//     });
 
-
-
-// Brand
+// Brand Animasi
 // setInterval(scrollImage, 3000);
 
 // function scrollImage() {
@@ -123,7 +122,7 @@ function getSearchParameter() {
   function performSearch() {
     let searchInput = getSearchParameter();
   
-    // Dapatkan semua elemen dengan kelas "pro"
+    // Mendapatkan semua element card
     let items = document.getElementsByClassName("card");
   
     // Loop melalui semua elemen dan sembunyikan yang tidak sesuai
