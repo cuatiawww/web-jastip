@@ -178,7 +178,7 @@ body {
   background-color: #090909;
 }
 .search-bar input:focus {
-  background-color: #090909; /* Change background color when focused */
+  background-color: #090909; 
 }
 
 .search-bar .input-group-prepend {
@@ -192,9 +192,36 @@ body {
 }
 
 .search-bar .form-control {
-  padding-left: 2.5rem; /* Atur jarak kiri sesuai lebar ikon */
+  padding-left: 2.5rem;
 }
-
+/* REUSE */
+.header-component{
+  background-color: #080404;
+  color: #E7E7E8 !important;
+  padding:10px !important;
+}
+.floating-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #080404;
+  z-index: 9999;
+}
+.breadcrumb {
+  margin-top: 10px;
+} 
+.card .card-body{
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+.card .card-body,
+.card .card-body .bg-image {
+  border: 2px solid #080404 !important;
+}
+.card .card-body:hover,
+.card .card-body .bg-image:hover {
+  
+}
 /* BUTTON */
 .btn-primary {
   background: #ecbb1c;
@@ -446,18 +473,23 @@ a{
 .icon-kategori {
   color: #ecbb1c;
 }
-.btn-outline-secondary{
-  border-color: white !important;
+.text-div{
+  color: #E7E7E8;
+}
+.btn-secondary{
+  border-color: #ecbb1c !important;
+  background-color: #080404;
+
 }
 
-.btn-outline-secondary:hover {
+.btn-secondary:hover {
   background-color: #ecbb1c;
-  color: #fff;
-  border-color: white !important;
+  color: #080404;
+  border-color: #ecbb1c !important;
 }
 
-.btn-outline-secondary:hover .icon-kategori {
-  color: #fff;
+.btn-secondary:hover .icon-kategori {
+  color: #080404;
 }
 
 
@@ -694,13 +726,16 @@ h6 {
 }
 
 /* paymentForm */
+.container-payment{
+  background-color: #080404;
+}
 .payment {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 25px;
   min-height: 100vh;
-  background: rgb(241, 241, 241);
+  /* background: rgb(241, 241, 241); */
   padding-bottom: 70px;
 }
 
@@ -832,12 +867,35 @@ h6 {
 }
 
 /* LIVE JASTIP */
+.match-height h3,
+.match-height p{
+  color:#080404;
+}
 .match-height {
+
   transition: transform 0.3s ease;
   border-radius: 25px;
 }
 
 .match-height:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+.box-tiktok {
+  background-color: #080404;
+}
+.box-tiktok h3,
+.box-tiktok p{
+  color:#E7E7E8;
+}
+
+.box-tiktok {
+
+  transition: transform 0.3s ease;
+  border-radius: 25px;
+}
+
+.box-tiktok:hover {
   transform: translateY(-5px);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }

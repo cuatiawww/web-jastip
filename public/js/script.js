@@ -55,6 +55,19 @@ fetch('./footer.html').then(function(snap){
         footer.innerHTML = result;
     })
 })
+
+// HEADER
+window.addEventListener("scroll", function() {
+    var header = document.querySelector(".header-component");
+    var scrollPosition = window.pageYOffset;
+
+    if (scrollPosition > 0) {
+      header.classList.add("floating-header");
+    } else {
+      header.classList.remove("floating-header");
+    }
+  });
+  
 // FITUR REALEATED PRODUCT
 // fetch('../../public/kategori/katalogWomen.html')
 //     .then(function(response) {
