@@ -169,7 +169,15 @@ body {
 }
 /* ANIMASI */
 
-
+.page-link {
+  /* background-color: #ecbb1c !important; */
+  color:#ecbb1c !important; 
+}
+.active .page-link {
+  background-color: #ecbb1c !important;
+  color:#fff !important;
+  border: none !important;
+}
 /* SEARCH BAR */  
 .search-bar {
   position: relative;
