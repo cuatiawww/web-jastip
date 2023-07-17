@@ -1,15 +1,12 @@
-//Membuat authentication email & password dengan menggunakan firebase
-const container = document.querySelector(".container"); //menangkap landing page
-//pengkondisian jika user berhail login maka akan masuk ke index.html
+const container = document.querySelector(".container"); 
 firebase.auth().onAuthStateChanged((user) => {
     if (user) {
         // Dashboard(user);
-        window.location.href = "index.html ";
+        window.location.href = "index.html";
     } else {
-        Landing(); //jika gagal maka akan tetap berada di halaman login
+        Landing(); 
     }
 });
-//menangkap form login dan mengirimkan nilai ke database firebase
 const Landing = () => {
     const email = document.querySelector("#email");
     const password = document.querySelector("#password");
@@ -38,3 +35,4 @@ const Landing = () => {
         });
     });
 }
+
