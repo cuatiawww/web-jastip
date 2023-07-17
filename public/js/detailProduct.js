@@ -150,21 +150,24 @@ function setImage(src) {
 
     console.log(productImageSmall);
 }
+const checkAuthAndRedirect = (paymentUrl) => {
+    firebase.auth().onAuthStateChanged((user) => {
+        if (user) {
+            // Pengguna sudah login, izinkan pembayaran
+            window.location.href = paymentUrl;
+        } else {
+            // Pengguna belum login, tampilkan peringatan atau alihkan ke halaman login
+            alert("Silakan login untuk melakukan pembayaran.");
+            // Anda dapat mengalihkan ke halaman login dengan menggunakan:
+            window.location.href = "login.html";
+        }
+    });
+};
 
-// masuk pemesanan
-function pesanan(url) {
-    window.location.href = url;
-}
-// const buyThisBtn = document.getElementById('#buyThisBtn');
-// buyThisBtn.addEventListener("click", (event) => {
-//   event.preventDefault();
+const buyThisBtn = document.querySelector("#buyThisBtn");
+buyThisBtn.addEventListener("click", () => {
+    checkAuthAndRedirect('./paymentForm.html');
+});
 
-//   if (!firebase.auth().currentUser) {
-//     alert("You must be logged in to buy this item.");
-//   } else {
-//     // Lakukan tindakan jika pengguna sedang login
-//     window.location.href = '../paymentForm.html';
-//   }
-// });
 
 

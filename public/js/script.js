@@ -158,6 +158,5 @@ function getSearchParameter() {
   // Panggil fungsi performSearch saat halaman selesai dimuat
   window.addEventListener("load", performSearch);
 
-//   ANIMASI
   
 

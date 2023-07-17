@@ -91,7 +91,7 @@
           <option>Large</option>
         </select>
         <input type="number" value="1" min="0" />
-        <button class="normal" id="buyThisBtn" onclick="pesanan('./paymentForm.html')">Buy This</button>
+        <button class="normal" id="buyThisBtn" >Buy This</button>
         <h4>Product Details</h4>
         <span id="details">
           Shmoofoil Painted Short Sleeve Tee A Tee for all genders with art by
@@ -214,13 +214,24 @@
     </section>
     
 
-    <!-- Script-->
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script> 
+    <!-- FIREBASE WAJIB -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+
+    <!-- FIREBASE PILIHAN -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <!-- <script src="./js/navigation.js"></script> -->
     <script src="./js/firebase-config.js"></script>
+    <!-- <script src="./js/firebase-login.js"></script> -->
     <script src="./js/detailProduct.js"></script>
     <script src="./js/script.js"></script>
-    <script src="./js/firebase-login.js"></script>
-    <script src="./js/firebase-logout.js"></script>
-    
+    <!-- <script>
+      const buyThisBtn = document.querySelector("#buyThisBtn");
+    buyThisBtn.addEventListener("click", () => {
+    pesanan('../paymentForm.html');
+  });
+    </script> -->
   </body>
 </html>
