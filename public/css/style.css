@@ -295,9 +295,12 @@ body {
   width: 100%;
 } */
 
+.fa-magnifying-glass{
+  z-index:1;
+}
 #sidebar-wrapper {
   position: fixed;
-  z-index: 2;
+  z-index: 5;
   right: 0;
   width: 250px;
   height: 100%;

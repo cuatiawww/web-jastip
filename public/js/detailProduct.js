@@ -155,4 +155,16 @@ function setImage(src) {
 function pesanan(url) {
     window.location.href = url;
 }
+// const buyThisBtn = document.getElementById('#buyThisBtn');
+// buyThisBtn.addEventListener("click", (event) => {
+//   event.preventDefault();
+
+//   if (!firebase.auth().currentUser) {
+//     alert("You must be logged in to buy this item.");
+//   } else {
+//     // Lakukan tindakan jika pengguna sedang login
+//     window.location.href = '../paymentForm.html';
+//   }
+// });
+
 

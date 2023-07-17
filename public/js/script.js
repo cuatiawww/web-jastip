@@ -57,6 +57,8 @@ fetch('./footer.html').then(function(snap){
         footer.innerHTML = result;
     })
 })
+// Buy This
+
 
 // HEADER
 // window.addEventListener("scroll", function() {
@@ -107,7 +109,7 @@ fetch('./footer.html').then(function(snap){
 //     });
 
 // Brand Animasi
-setInterval(scrollImage, 3000);
+// setInterval(scrollImage, 3000);
 
 function scrollImage() {
     const block = document.querySelector('.block');

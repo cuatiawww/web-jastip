@@ -1,7 +1,6 @@
 const container = document.querySelector(".container"); 
 firebase.auth().onAuthStateChanged((user) => {
     if (user) {
-        // Dashboard(user);
         window.location.href = "index.html";
     } else {
         Landing(); 
@@ -35,4 +34,3 @@ const Landing = () => {
         });
     });
 }
-

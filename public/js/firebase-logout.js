@@ -1,4 +1,5 @@
 const authButton = document.getElementById('authButton');
+const buyThisButton = document.getElementById('buyThisBtn');
 
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
@@ -14,11 +15,18 @@ const authButton = document.getElementById('authButton');
             })
             .catch((err) => alert(err));
         });
+          // buyThisButton.addEventListener("click", () => {
+          //   window.location.href = '../paymentForm.html';
+          // });
       } else {
         // User is not logged in
         authButton.textContent = 'Sign Up / Login';
         authButton.addEventListener('click', () => {
           window.location.href = 'login.html';
         });
+          // buyThisButton.addEventListener("click", () => {
+          //   alert("Silakan login terlebih dahulu");
+          //   window.location.href = "../login.html";
+          // });
       }
     });
