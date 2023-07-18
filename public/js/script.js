@@ -121,42 +121,44 @@ function scrollImage() {
         block.style.transform = 'translateX(0)';
     }, 500);
 }
-//Membuat function search ketika diinput oleh user dan menampilkan produk berdasarkan nama produk dari inputan user 
-function search() {
-    let searchInput = document.getElementById("searchInput").value.toLowerCase();
+// //Membuat function search ketika diinput oleh user dan menampilkan produk berdasarkan nama produk dari inputan user 
+// function search() {
+//     let searchInput = document.getElementById("searchInput").value.toLowerCase();
   
-    // Pindah ke halaman produk.html dengan parameter pencarian
-    window.location.href ="./katalogSearch.html"+"?search=" + encodeURIComponent(searchInput);
-  }
+//     // Pindah ke halaman produk.html dengan parameter pencarian
+//     window.location.href ="./produkKategori.html"+"?search=" + encodeURIComponent(searchInput);
+//   }
   
-// Fungsi untuk mendapatkan nilai parameter pencarian dari URL
-function getSearchParameter() {
-    let urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get("search");
-  }
+// // Fungsi untuk mendapatkan nilai parameter pencarian dari URL
+// function getSearchParameter() {
+//     let urlParams = new URLSearchParams(window.location.search);
+//     return urlParams.get("search");
+//   }
   
-  // Fungsi untuk melakukan pencarian pada elemen-elemen produk
-  function performSearch() {
-    let searchInput = getSearchParameter();
+//   // Fungsi untuk melakukan pencarian pada elemen-elemen produk
+//   function performSearch() {
+//     let searchInput = getSearchParameter();
+
+//     // Mendapatkan semua elemen dengan kelas "product-title"
+//     let items = document.getElementsByClassName("product-title");
+
+//     // Loop melalui semua elemen dan sembunyikan yang tidak sesuai
+//     for (let i = 0; i < items.length; i++) {
+//         let item = items[i];
+//         let title = item.querySelector("h2").innerText.toLowerCase();
+
+//         if (title.includes(searchInput)) {
+//             item.parentNode.style.display = "block";
+//         } else {
+//             item.parentNode.style.display = "none";
+//         }
+//     }
+// }
+
   
-    // Mendapatkan semua element card
-    let items = document.getElementsByClassName("card");
+//   // Panggil fungsi performSearch saat halaman selesai dimuat
+//   window.addEventListener("load", performSearch);
   
-    // Loop melalui semua elemen dan sembunyikan yang tidak sesuai
-    for (let i = 0; i < items.length; i++) {
-      let item = items[i];
-      let title = item.getElementsByTagName("h5")[0].innerText.toLowerCase();
-  
-      if (title.includes(searchInput)) {
-        item.style.display = "block";
-      } else {
-        item.style.display = "none";
-      }
-    }
-  }
-  
-  // Panggil fungsi performSearch saat halaman selesai dimuat
-  window.addEventListener("load", performSearch);
 
   
 

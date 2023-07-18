@@ -150,6 +150,7 @@ function setImage(src) {
 
     console.log(productImageSmall);
 }
+//INI LOGIKA LOGIN BUY THIS
 const checkAuthAndRedirect = (paymentUrl) => {
     firebase.auth().onAuthStateChanged((user) => {
         if (user) {

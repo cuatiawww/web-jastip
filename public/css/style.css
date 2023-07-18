@@ -551,7 +551,13 @@ h6 {
 .shop {
   margin-top: 1rem;
 }
-
+.product-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  flex-wrap: wrap;
+  margin: px;
+}
 .pro-container {
   display: flex;
   justify-content: space-between;
@@ -560,8 +566,8 @@ h6 {
 }
 
 .pro {
-  width: 23%;
-  min-width: 250px;
+  width: 220px;
+  min-width: 240px;
   padding: 10px 12px;
   border: 2px solid ;
   border-radius: 15px;
@@ -587,7 +593,7 @@ h6 {
 
 
 .product-img {
-  width: 100%;
+  width: 210px;
   height: auto;
   border-radius: 10px;
   margin-bottom: 0.5rem;
@@ -598,6 +604,9 @@ h6 {
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 0.8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .price {

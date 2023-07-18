@@ -70,10 +70,10 @@
           Inggris, China, Hong Kong & Singapura)
         </p>
         
-          <form class="input-group mb-3 search-bar" action="javascript:void(0)">
-            <input type="text" class="form-control search-bar" placeholder="Search..." id="searchInput" >
-            <button class="btn input-group-prepend" type="submit" onclick="search()"><i class="fa-solid fa-magnifying-glass"></i></button>
-          </form>
+        <form class="input-group mb-3 search-bar" action="javascript:void(0)">
+          <input type="text" class="form-control search-bar" placeholder="Search..." id="searchInput"  oninput="performSearch()">
+          <button class="btn input-group-prepend" type="submit" onclick="search()"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
       </div>
     </header>
     <!-- Content -->
@@ -114,6 +114,7 @@
     <script src="./js/script.js"></script>
     <script src="./js/firebase-logout.js"></script>
     <script src="./js/detailProduct.js"></script>
-    
+    <script src="./js/kategori.js"></script>
+
   </body>
 </html>
