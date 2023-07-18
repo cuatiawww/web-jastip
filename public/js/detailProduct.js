@@ -103,6 +103,50 @@ const items = [
         price: "Rp420.000",
         store: "Xiaomi",
         details: "With the simple design and pure white cover, the compact Mi Smart Clock blends perfectly into any room. With help from Google, waking up and getting ready for bed have never been easier. Play your favorite music, podcast, or radio show from Youtube Music or Spotify directly on Mi Smart Clock. Talk to Google on your Mi Smart Clock for hands-free help. Use your voice to set an alarm, get answers, check the weather, play music, and more. Just say “Ok Google” to get started. Connect to your other IoT devices and use Mi Smart Clock as a control center. Connect Mi Smart Clock to a smart camera to see what the camera is recording directly on the clock screen."
+    },
+    {
+        id: 9,
+        image: "j1.jpg",
+        smallimg: "j1.2.jpg",
+        smallimg1: "j1.3.jpg",
+        smallimg2: "j1.4.jpg",
+        title: "Varsity Jacket FTH x EVOS",
+        price: "Rp920.000",
+        store: "EVOSGOODS",
+        details: "Faith Industries (FTH) is collaborating again this time with the EVOS Esports organization to release its newest capsule collection. This capsule collection follows many of the EVOS Esports elements with its color palette which includes black, white and blue tones." 
+    },
+    {
+        id: 10,
+        image: "jt1.jpg",
+        smallimg: "jt1.2.jpg",
+        smallimg1: "jt1.3.jpg",
+        smallimg2: "jt1.4.jpg",
+        title: "TAG Heuer Carrera",
+        price: "Rp47.000.000",
+        store: "TAG Heuer",
+        details: "As daring as ever, the resilient TAG Heuer Carrera is driven to the next level thanks to new details on this proudly upgraded chronograph. Improved dial and case elements prove the boldness and conviction of this great classic."
+    },
+    {
+        id: 11,
+        image: "k3.jpg",
+        smallimg: "k3.2.jpg",
+        smallimg1: "k3.3.jpeg",
+        smallimg2: "k3.4.jpg",
+        title: "Big & Tall Sport Shirt, Irish Linen",
+        price: "Rp860.000",
+        store: "Brooks Brothers",
+        details: "The fabric for this style is woven for us by the renowned Baird McNutt mill in Ireland, which has been making the world's finest linen since 1912. Additional features include our signature 6-Pleat Shirring® at the barrel cuffs and a left chest pocket."
+    },
+    {
+        id: 12,
+        image: "t1.jpg",
+        smallimg: "t1.2.jpg",
+        smallimg1: "t1.3.jpg",
+        smallimg2: "t1.4.jpg",
+        title: "Stussy Cord Low Pro Cap",
+        price: "Rp294.000",
+        store: "Stussy",
+        details: "With its cotton/viscose construction and low profile 6 panel look, the Big Logo Low Pro Cap from Stussy is a versatile look for any wardrobe, now with a corded material design. A small signature Stussy logo sits embroidered at the centre of the cap for that OG look, with the curved brim and adjustable closure making for a practical fit."
     }
 ];
 

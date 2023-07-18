@@ -299,6 +299,7 @@ function renderProduk(totalCount = produk.length) {
     produk.forEach(function (produk, index) {
         let proContainer = document.createElement('div');
         proContainer.className = 'pro';
+        proContainer.setAttribute('onclick', `pindahHalaman(${index})`);
 
         let gambar = document.createElement('img');
         gambar.src = produk.gambar;
