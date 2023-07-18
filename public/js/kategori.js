@@ -288,134 +288,15 @@ let produk = [
         gambar: '../assets/img/b5.jpg',
         toko: 'Goodreads'
     },
-    
-    // //6
-    // {
-    //     judul: 'Produk B',
-    //     kategori: 'women',
-    //     harga: 20000,
-    //     deskripsi: 'Deskripsi Produk B',
-    //     gambar: '../assets/img/b3.jpg',
-    //     toko: 'Toko B'
-    // },
-    // {
-    //     judul: 'Produk C',
-    //     kategori: 'men',
-    //     harga: 15000,
-    //     deskripsi: 'Deskripsi Produk C',
-    //     gambar: '../assets/img/d1.jpg',
-    //     toko: 'Toko C'
-    // },
-    // {
-    //     judul: 'Produk B',
-    //     kategori: 'kid',
-    //     harga: 20000,
-    //     deskripsi: 'Deskripsi Produk B',
-    //     gambar: '../assets/img/k1.jpg',
-    //     toko: 'Toko B'
-    // },
-    // {
-    //     judul: 'Produk C',
-    //     kategori: 'shoes',
-    //     harga: 15000,
-    //     deskripsi: 'Deskripsi Produk C',
-    //     gambar: '../assets/img/b5.jpg',
-    //     toko: 'Toko C'
-    // },
-    // {
-    //     judul: 'Produk C',
-    //     kategori: 'electronic',
-    //     harga: 15000,
-    //     deskripsi: 'Deskripsi Produk C',
-    //     gambar: '../assets/img/k1.2.jpg',
-    //     toko: 'Toko C'
-    // },
-    // {
-    //     judul: 'Produk B',
-    //     kategori: 'home',
-    //     harga: 20000,
-    //     deskripsi: 'Deskripsi Produk B',
-    //     gambar: '../assets/img/j1.jpg',
-    //     toko: 'Toko B'
-    // },
-    // {
-    //     judul: 'Produk A',
-    //     kategori: 'book',
-    //     harga: 10000,
-    //     deskripsi: 'Deskripsi Produk A',
-    //     gambar: '../assets/img/b2.jpg',
-    //     toko: 'Toko A'
-    // },
-    
-    // //7
-    // {
-    //     judul: 'Produk B',
-    //     kategori: 'women',
-    //     harga: 20000,
-    //     deskripsi: 'Deskripsi Produk B',
-    //     gambar: '../assets/img/b3.jpg',
-    //     toko: 'Toko B'
-    // },
-    // {
-    //     judul: 'Produk C',
-    //     kategori: 'men',
-    //     harga: 15000,
-    //     deskripsi: 'Deskripsi Produk C',
-    //     gambar: '../assets/img/d1.jpg',
-    //     toko: 'Toko C'
-    // },
-    // {
-    //     judul: 'Produk B',
-    //     kategori: 'kid',
-    //     harga: 20000,
-    //     deskripsi: 'Deskripsi Produk B',
-    //     gambar: '../assets/img/k1.jpg',
-    //     toko: 'Toko B'
-    // },
-    // {
-    //     judul: 'Produk C',
-    //     kategori: 'shoes',
-    //     harga: 15000,
-    //     deskripsi: 'Deskripsi Produk C',
-    //     gambar: '../assets/img/b5.jpg',
-    //     toko: 'Toko C'
-    // },
-    // {
-    //     judul: 'Produk C',
-    //     kategori: 'electronic',
-    //     harga: 15000,
-    //     deskripsi: 'Deskripsi Produk C',
-    //     gambar: '../assets/img/k1.2.jpg',
-    //     toko: 'Toko C'
-    // },
-    // {
-    //     judul: 'Produk B',
-    //     kategori: 'home',
-    //     harga: 20000,
-    //     deskripsi: 'Deskripsi Produk B',
-    //     gambar: '../assets/img/j1.jpg',
-    //     toko: 'Toko B'
-    // },
-    // {
-    //     judul: 'Produk A',
-    //     kategori: 'book',
-    //     harga: 10000,
-    //     deskripsi: 'Deskripsi Produk A',
-    //     gambar: '../assets/img/b2.jpg',
-    //     toko: 'Toko A'
-    // },
-    
-
-    // Tambahkan produk lain di sini
 ];
 let totalProdukCount = 0; // Variabel untuk menyimpan jumlah total produk
 
-function renderProduk(totalCount = produk.length){
+function renderProduk(totalCount = produk.length) {
     let container = document.getElementById('product-container');
     let itemCount = document.getElementById('item-count');
     container.innerHTML = '';
-    
-    produk.forEach(function (produk) {
+
+    produk.forEach(function (produk, index) {
         let proContainer = document.createElement('div');
         proContainer.className = 'pro';
 
@@ -447,7 +328,8 @@ function renderProduk(totalCount = produk.length){
 
         container.appendChild(proContainer);
     });
-    totalProdukCount = produk.length; // Perbarui jumlah total produk
+
+    totalProdukCount = totalCount; // Perbarui jumlah total produk
     updateTotalProdukCount(totalProdukCount); // Perbarui tampilan jumlah total produk
 }
 
@@ -463,17 +345,18 @@ function filterProduk() {
             return produk.kategori === kategori;
         });
     }
+
     renderFilteredProduk(filteredProduk, filteredProduk.length, totalProdukCount);
 }
-
 
 function renderFilteredProduk(filteredProduk, filteredProdukCount, totalProdukCount) {
     let container = document.getElementById('product-container');
     container.innerHTML = '';
 
-    filteredProduk.forEach(function (produk) {
+    filteredProduk.forEach(function (produk, index) {
         let proContainer = document.createElement('div');
         proContainer.className = 'pro';
+        proContainer.setAttribute('onclick', `pindahHal(${index})`);
 
         let gambar = document.createElement('img');
         gambar.src = produk.gambar;
@@ -503,63 +386,82 @@ function renderFilteredProduk(filteredProduk, filteredProdukCount, totalProdukCo
 
         container.appendChild(proContainer);
     });
+
     updateTotalProdukCount(filteredProdukCount);
 }
+
 function updateTotalProdukCount(count) {
     let itemCount = document.getElementById('item-count');
     itemCount.textContent = count + ' Items found';
-  }
+}
+
 // Render semua produk saat halaman pertama kali dimuat
 renderProduk();
+
 // Membuat fungsi pencarian ketika diinput oleh pengguna dan menampilkan produk berdasarkan nama produk dari inputan pengguna
 function search() {
     let searchInput = document.getElementById('searchInput').value.toLowerCase();
-  
+
     // Pindah ke halaman produk.html dengan parameter pencarian
     window.location.href = './produkKategori.html' + '?search=' + encodeURIComponent(searchInput);
-  }
-  
-  // Fungsi untuk mendapatkan nilai parameter pencarian dari URL
-  function getSearchParameter() {
+}
+
+// Fungsi untuk mendapatkan nilai parameter pencarian dari URL
+function getSearchParameter() {
     let urlParams = new URLSearchParams(window.location.search);
     return urlParams.get('search');
-  }
-  
-  // Fungsi untuk melakukan pencarian pada elemen-elemen produk
-  function performSearch() {
+}
+
+// Fungsi untuk melakukan pencarian pada elemen-elemen produk
+function performSearch() {
     let searchInput = getSearchParameter();
-  
-    // Mendapatkan semua elemen dengan kelas "pro"
-    let items = document.getElementsByClassName('pro');
-    let filteredProdukCount = 0; // Variabel untuk menyimpan jumlah produk yang ditemukan
-  
-    // Loop melalui semua elemen dan sembunyikan yang tidak sesuai
-    for (let i = 0; i < items.length; i++) {
-      let item = items[i];
-      let title = item.querySelector('.product-title').textContent.toLowerCase();
-  
-      if (title.includes(searchInput)) {
-        item.style.display = 'block';
-        filteredProdukCount++; // Menambah jumlah produk yang ditemukan
-      } else {
-        item.style.display = 'none';
-      }
+
+    if (searchInput) {
+        let filteredProduk = produk.filter(function (produk) {
+            return produk.judul.toLowerCase().includes(searchInput);
+        });
+
+        renderFilteredProduk(filteredProduk, filteredProduk.length, totalProdukCount);
     }
-  
-    updateTotalProdukCount(filteredProdukCount);
-  }
-  window.addEventListener('DOMContentLoaded', function () {
-    let searchInput = getSearchParameter();
-  
-    if (!searchInput) {
-      renderProduk();
-    }
-  
-    let select = document.getElementById('kategori-select');
-    select.addEventListener('change', function() {
-      renderProduk();
-      filterProduk();
+}
+
+//PINDAH HALAMAn
+function pindahHal(index) {
+    // Mendapatkan produk berdasarkan index
+    let selectedProduk = produk[index];
+
+    // Mengisi detail produk dengan data yang sesuai
+    document.getElementById('MainImg').src = selectedProduk.gambar;
+    document.getElementById('productName').textContent = selectedProduk.judul;
+    document.getElementById('productPrice').textContent = 'Rp' + selectedProduk.harga;
+
+    let sizeSelect = document.getElementById('sizeSelect');
+    sizeSelect.innerHTML = '<option>Select Size</option>';
+    // Mengisi pilihan ukuran pada dropdown
+    selectedProduk.size.forEach(function (size) {
+        let option = document.createElement('option');
+        option.textContent = size;
+        sizeSelect.appendChild(option);
     });
-  
+
+    document.getElementById('details').textContent = selectedProduk.deskripsi;
+
+    // Pindah ke halaman detail produk
+    window.location.href = '../detail.html';
+}
+
+
+window.addEventListener('DOMContentLoaded', function () {
+    let searchInput = getSearchParameter();
+
+    if (!searchInput) {
+        renderProduk();
+    }
+
+    let select = document.getElementById('kategori-select');
+    select.addEventListener('change', function () {
+        filterProduk();
+    });
+
     performSearch();
 });
