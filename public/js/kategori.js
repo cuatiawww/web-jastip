@@ -299,7 +299,10 @@ function renderProduk(totalCount = produk.length) {
     produk.forEach(function (produk, index) {
         let proContainer = document.createElement('div');
         proContainer.className = 'pro';
-        proContainer.setAttribute('onclick', `pindahHalaman(${index})`);
+        proContainer.addEventListener('click', function () {
+            // Pindah ke halaman produkDetail.html dengan parameter indeks produk
+            window.location.href = './produkDetail.html' + '?index=' + index;
+        });
 
         let gambar = document.createElement('img');
         gambar.src = produk.gambar;
@@ -357,7 +360,10 @@ function renderFilteredProduk(filteredProduk, filteredProdukCount, totalProdukCo
     filteredProduk.forEach(function (produk, index) {
         let proContainer = document.createElement('div');
         proContainer.className = 'pro';
-        proContainer.setAttribute('onclick', `pindahHal(${index})`);
+        proContainer.addEventListener('click', function () {
+            // Pindah ke halaman produkDetail.html dengan parameter indeks produk
+            window.location.href = './produkDetail.html' + '?index=' + index;
+        });
 
         let gambar = document.createElement('img');
         gambar.src = produk.gambar;
@@ -404,7 +410,7 @@ function search() {
     let searchInput = document.getElementById('searchInput').value.toLowerCase();
 
     // Pindah ke halaman produk.html dengan parameter pencarian
-    window.location.href = './produkKategori.html' + '?search=' + encodeURIComponent(searchInput);
+    window.location.href = '../produkKategori.html' + '?search=' + encodeURIComponent(searchInput);
 }
 
 // Fungsi untuk mendapatkan nilai parameter pencarian dari URL
@@ -425,32 +431,6 @@ function performSearch() {
         renderFilteredProduk(filteredProduk, filteredProduk.length, totalProdukCount);
     }
 }
-
-//PINDAH HALAMAn
-function pindahHal(index) {
-    // Mendapatkan produk berdasarkan index
-    let selectedProduk = produk[index];
-
-    // Mengisi detail produk dengan data yang sesuai
-    document.getElementById('MainImg').src = selectedProduk.gambar;
-    document.getElementById('productName').textContent = selectedProduk.judul;
-    document.getElementById('productPrice').textContent = 'Rp' + selectedProduk.harga;
-
-    let sizeSelect = document.getElementById('sizeSelect');
-    sizeSelect.innerHTML = '<option>Select Size</option>';
-    // Mengisi pilihan ukuran pada dropdown
-    selectedProduk.size.forEach(function (size) {
-        let option = document.createElement('option');
-        option.textContent = size;
-        sizeSelect.appendChild(option);
-    });
-
-    document.getElementById('details').textContent = selectedProduk.deskripsi;
-
-    // Pindah ke halaman detail produk
-    window.location.href = '../detail.html';
-}
-
 
 window.addEventListener('DOMContentLoaded', function () {
     let searchInput = getSearchParameter();
