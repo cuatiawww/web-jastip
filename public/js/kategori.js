@@ -175,7 +175,7 @@ let produk = [
     
     //4
     {
-        judul: 'Jacket FTH x EVOS "Let The Roar Begin"',
+        judul: "Jacket FTH x EVOS 'Let The Roar Begin'",
         kategori: 'women',
         harga: '934.000',
         deskripsi: 'Faith Industries (FTH) is collaborating again this time with the EVOS Esports organization to release its newest capsule collection. This capsule collection follows many of the EVOS Esports elements with its color palette which includes black, white and blue tones.',
@@ -183,7 +183,7 @@ let produk = [
         toko: 'EVOSGOODS'
     },
     {
-        judul: 'Big & Tall Sport Shirt, Irish Linen',
+        judul: 'Big and Tall Sport Shirt, Irish Linen',
         kategori: 'men',
         harga: '860.000',
         deskripsi: 'The fabric for this style is woven for us by the renowned Baird McNutt mill in Ireland, which has been making the worlds finest linen since 1912. Additional features include our signature 6-Pleat Shirring® at the barrel cuffs and a left chest pocket.',

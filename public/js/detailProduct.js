@@ -132,7 +132,7 @@ const items = [
         smallimg: "k3.2.jpg",
         smallimg1: "k3.3.jpeg",
         smallimg2: "k3.4.jpg",
-        title: "Big & Tall Sport Shirt, Irish Linen",
+        title: "Big and Tall Sport Shirt, Irish Linen",
         price: "Rp860.000",
         store: "Brooks Brothers",
         details: "The fabric for this style is woven for us by the renowned Baird McNutt mill in Ireland, which has been making the world's finest linen since 1912. Additional features include our signature 6-Pleat Shirring® at the barrel cuffs and a left chest pocket."
@@ -153,11 +153,55 @@ const items = [
         image: "d1.jpg",
         smallimg: "d1.2.jpg",
         smallimg1: "d1.3.jpg",
-        smallimg2: "t1.4.jpg",
+        smallimg2: "d1.4.jpg",
         title: "Astrid Textured Slit Dress Black",
         price: "Rp534.000",
         store: "The Willow Label",
         details: "Made of textured polyester elastane blend. Lined; until slit opening. Slight stretch. Concealed back zip. Slide slit (approx 17)."
+    },
+    {
+        id: 14,
+        image: "s6.jpg",
+        smallimg: "s6.2.jpg",
+        smallimg1: "s6.3.jpg",
+        smallimg2: "s6.4.jpg",
+        title: "Jimmy Choo Hitch 100 Sandals",
+        price: "Rp4.340.000",
+        store: "Jimmy Choo",
+        details: "Hitch 100 sandals from Jimmy Choo feature a contemporary caged design that show off the shape of the foot with its cut out details. Securely fastened with a tie fastening, these stand-out Hitch sandals are finished with a luxurious leather brand embossed insole and a leather insole whilst the striking 100mm high stiletto heel elongates the leg."
+    },
+    {
+        id: 15,
+        image: "tas1.jpg",
+        smallimg: "tas1.2.jpg",
+        smallimg1: "tas1.3.png",
+        smallimg2: "tas1.4.jpg",
+        title: "Slingbag Chanel Flap Medium Black Caviar",
+        price: "Rp3.504.000",
+        store: "Chanel",
+        details:"A Chanel Timeless Classic crafted from Black Caviar leather. The structured silhouette offers plenty of space for your wallet, phone and keys. Produced in 2017. Chanel's medium-sized design effortlessly transitions from day to night - carry it from brunch dates to the office, to dinner beyond."
+    },
+    {
+        id: 16,
+        image: "j2.jpg",
+        smallimg: "j2.2.jpg",
+        smallimg1: "j2.3.jpg",
+        smallimg2: "j2.4.jpg",
+        title: "Jacket FTH x EVOS 'Let The Roar Begin'",
+        price: "Rp934.000",
+        store: "EVOSGOODS",
+        details: "Faith Industries (FTH) is collaborating again this time with the EVOS Esports organization to release its newest capsule collection. This capsule collection follows many of the EVOS Esports elements with its color palette which includes black, white and blue tones."
+    },
+    {
+        id: 17,
+        image: "skincare.jpg",
+        smallimg: "skincare2.jpg",
+        smallimg1: "skincare3.jpg",
+        smallimg2: "skincare4.jpg",
+        title: "Ms Glow Whitening Original",
+        price: "Rp300.000",
+        store: "Ms Glow",
+        details: "Formulated for normal or dry skin, it makes white skin glow healthy all day long. Consists of 4 facial wash products, toner, whitening day cream, and whitening night cream with pouch bag packaging."
     }
 ];
 
