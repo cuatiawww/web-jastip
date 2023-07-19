@@ -295,13 +295,16 @@ function renderProduk(totalCount = produk.length) {
     let container = document.getElementById('product-container');
     let itemCount = document.getElementById('item-count');
     container.innerHTML = '';
+    let selected = document.getElementById('kategori-select');
+
+    filterProduk();
 
     produk.forEach(function (produk, index) {
         let proContainer = document.createElement('div');
         proContainer.className = 'pro';
         proContainer.addEventListener('click', function () {
             // Pindah ke halaman produkDetail.html dengan parameter indeks produk
-            window.location.href = './produkDetail.html' + '?index=' + index;
+            window.location.href = './detailProduct.html' + '?title=' + produk.judul;
         });
 
         let gambar = document.createElement('img');
@@ -342,6 +345,7 @@ function filterProduk() {
     let kategori = select.value;
     let filteredProduk = [];
 
+
     if (kategori === 'all') {
         filteredProduk = produk;
     } else {
@@ -350,10 +354,10 @@ function filterProduk() {
         });
     }
 
-    renderFilteredProduk(filteredProduk, filteredProduk.length, totalProdukCount);
+    renderFilteredProduk(filteredProduk, filteredProduk.length, totalProdukCount, kategori);
 }
 
-function renderFilteredProduk(filteredProduk, filteredProdukCount, totalProdukCount) {
+function renderFilteredProduk(filteredProduk, filteredProdukCount, totalProdukCount, kategori) {
     let container = document.getElementById('product-container');
     container.innerHTML = '';
 
@@ -362,7 +366,9 @@ function renderFilteredProduk(filteredProduk, filteredProdukCount, totalProdukCo
         proContainer.className = 'pro';
         proContainer.addEventListener('click', function () {
             // Pindah ke halaman produkDetail.html dengan parameter indeks produk
-            window.location.href = './produkDetail.html' + '?index=' + index;
+            window.location.href = './detailProduct.html' + '?title=' + produk.judul;
+            // simpan kategori di local storage
+            localStorage.setItem('search', kategori);
         });
 
         let gambar = document.createElement('img');
@@ -403,7 +409,15 @@ function updateTotalProdukCount(count) {
 }
 
 // Render semua produk saat halaman pertama kali dimuat
-renderProduk();
+let kategoriSelect = document.getElementById('kategori-select');
+
+if(!kategoriSelect.value) {
+    renderProduk();
+
+} else {
+    filterProduk();
+}
+
 
 // Membuat fungsi pencarian ketika diinput oleh pengguna dan menampilkan produk berdasarkan nama produk dari inputan pengguna
 function search() {
@@ -435,14 +449,22 @@ function performSearch() {
 window.addEventListener('DOMContentLoaded', function () {
     let searchInput = getSearchParameter();
 
+    const urlParams = new URLSearchParams(window.location.search);
+    const takeKategori = urlParams.get('kategori');
+
     if (!searchInput) {
-        renderProduk();
+        // renderProduk();
     }
 
     let select = document.getElementById('kategori-select');
+    select.value = takeKategori;
+    filterProduk();
+    
     select.addEventListener('change', function () {
-        filterProduk();
+        // filterProduk();
     });
+
+    
 
     performSearch();
 });

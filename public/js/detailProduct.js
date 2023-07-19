@@ -147,6 +147,17 @@ const items = [
         price: "Rp294.000",
         store: "Stussy",
         details: "With its cotton/viscose construction and low profile 6 panel look, the Big Logo Low Pro Cap from Stussy is a versatile look for any wardrobe, now with a corded material design. A small signature Stussy logo sits embroidered at the centre of the cap for that OG look, with the curved brim and adjustable closure making for a practical fit."
+    },
+    {
+        id: 13,
+        image: "d1.jpg",
+        smallimg: "d1.2.jpg",
+        smallimg1: "d1.3.jpg",
+        smallimg2: "t1.4.jpg",
+        title: "Astrid Textured Slit Dress Black",
+        price: "Rp534.000",
+        store: "The Willow Label",
+        details: "Made of textured polyester elastane blend. Lined; until slit opening. Slight stretch. Concealed back zip. Slide slit (approx 17)."
     }
 ];
 
@@ -155,16 +166,29 @@ function pindahHalaman(id) {
     window.location.href = 'detailProduct.html?id=' + id;
 
 }
+const urlParams = new URLSearchParams(window.location.search);
+const productId = parseInt(urlParams.get('id'));
+const productTitle = urlParams.get('title');
+
+window.addEventListener("DOMContentLoaded", function(event) { 
+    setImage()
+  });
 
 window.addEventListener("load", (event) => {
-    setImage("tes");
+    setImage();
 });
 
-function setImage(src) {
-    const urlParams = new URLSearchParams(window.location.search);
-    const productId = parseInt(urlParams.get('id'));
+function setImage() {
+    let prod = null;
+    if(productId){
+        prod = items.find(i => i.id === productId);
+    }
+    if(productTitle){
+        prod = items.find(i => 
+            i.title === productTitle
+        )
+    }
     
-    const prod = items.find(i => i.id === productId);
     
     const productImageMain = document.getElementById('MainImg');
     productImageMain.setAttribute('src', "../assets/img/"+prod.image);
@@ -191,6 +215,11 @@ function setImage(src) {
     document.getElementsByTagName('h4')[0].innerHTML = prod.title;
 
     document.getElementsByTagName('h2')[0].innerHTML = prod.price;
+
+    const relatedProduct = document.getElementById('related');
+    if(productTitle){
+        relatedProduct.className = "hidden";
+    }
 
     console.log(productImageSmall);
 }
