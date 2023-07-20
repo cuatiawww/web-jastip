@@ -33,7 +33,7 @@ let produk = [
         toko: 'Nike'
     },
     {
-        judul: 'Mi 23.8 Desktop Monitor 1C',
+        judul: "Mi 23.8'' Desktop Monitor 1C",
         kategori: 'electronic',
         harga: '1.599.000',
         deskripsi: 'The 23.8 IPS widescreen offers a wide 178-degree field of view, with a clear and realistic view at every angle. The thinnest part of the body measures 7.3 mm, so saves countertop space and looks neat. Internal 1920*1080 high definition quality of this 23.8 screen offers a crisp and clear view, soothing the eyes with amazing detail and refinement.',
@@ -141,7 +141,7 @@ let produk = [
         toko: 'Emomcare'
     },
     {
-        judul: 'Clarks Men Shoes RaceLite Tor',
+        judul: "Clarks Men's Shoes RaceLite Tor",
         kategori: 'shoes',
         harga: '1.304.000',
         deskripsi: 'A retro-sport addition, our RaceLite Tor shoe unites authentic Clarks craftsmanship with feel-good wear. Layers of suedes and nylons create a design-led profile, while its perforated leather and plush cushioning deliver breathable comfort and a vintage aesthetic.',
@@ -149,7 +149,7 @@ let produk = [
         toko: 'Clarks'
     },
     {
-        judul: 'Robot RT-BF10 Cleanable 720 Rotating',
+        judul: "Robot RT-BF10 Cleanable 720' Rotating",
         kategori: 'electronic',
         harga: '112.500',
         deskripsi: 'ROBOT RT-BF10 is a versatile fan equipped with a 18650, 2000 mAh lithium battery, so it can be used anytime and anywhere without having to be connected to a separate charger or power bank. This fan can be rotated 720 degrees so that it can be directed according to your wishes. Easy maintenance, can be opened and cleaned.',
