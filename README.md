@@ -59,8 +59,9 @@ Start server
 - [@prakasfl](https://github.com/)
 - [@destrio](https://github.com/)
 
-
-## Next Update DJastip ver 0.0.0.0.0.2
+## Update DJastip ver 0.0.0.0.0.2
+- fitur Search
+## Next Update DJastip ver 0.0.0.0.0.3
 - Produk menggunakan database
 - ada detail transaksi
 - tidak menggunakan API WA lagi
