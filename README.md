@@ -65,3 +65,4 @@ Start server
 - Produk menggunakan database
 - ada detail transaksi
 - tidak menggunakan API WA lagi
+- Profil user
