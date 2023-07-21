@@ -1,4 +1,4 @@
-# Website Jasa Titip (DJastip Ver 0.0.0.0.0.0.1)
+# Website Jasa Titip (DJastip Ver 0.0.0.0.0.0.2)
 ## About the Project
 DJastip adalah platform jasa titip yang menawarkan berbagai fitur unggulan untuk memudahkan pengguna dalam berbelanja dan mengirimkan barang. Dengan fokus pada jastip event-event dengan promo besar dan jastip luar negeri maupun dalam negeri, DJastip hadir sebagai mitra terpercaya yang siap memberikan pengalaman belanja yang menyenangkan dan tanpa batas. 
 DJastip siap memberikan pengalaman jastip yang terpercaya, nyaman, dan mudah. Slogan kami adalah "Terima Beres", karena kami berkomitmen untuk menyelesaikan segala urusan jastip Anda dengan baik.
@@ -62,3 +62,5 @@ Start server
 
 ## Next Update DJastip ver 0.0.0.0.0.2
 - Produk menggunakan database
+- ada detail transaksi
+- tidak menggunakan API WA lagi
