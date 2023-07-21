@@ -8,6 +8,7 @@ const ourTeam = document.getElementById('ourTeam');
 const footer = document.getElementById('footer');
 const katalogWomen = document.getElementById('item-container2');
 const katalogMen = document.getElementById('item-container3');
+const testimoni = document.getElementById('testimoni');
 // Carousel
 // Mengambil file html('./carousel.html) lalu dimasukkan ke dalam index.html  yang memiliki id 'carousel'
 // Ini berfungsi agar kode html tidak menumpuk di 1 file
@@ -57,7 +58,111 @@ fetch('./footer.html').then(function(snap){
         footer.innerHTML = result;
     })
 })
-// Buy This
+fetch('./testimoni.html').then(function(snap){
+    snap.text().then(function(result){
+        testimoni.innerHTML = result;
+    })
+}) // Array to store customer reviews
+// Array to store customer reviews
+let reviewsData = [];
+
+// Function to add a new review
+function addReview() {
+    const nameInput = document.getElementById('name');
+    const commentInput = document.getElementById('comment');
+
+    const name = nameInput.value.trim();
+    const comment = commentInput.value.trim();
+
+    // Get the selected rating value
+    const ratingInputs = document.getElementsByName('rate');
+    let rating = 0;
+    for (const input of ratingInputs) {
+        if (input.checked) {
+            rating = parseInt(input.value);
+            break;
+        }
+    }
+
+    if (name !== '' && comment !== '' && rating !== 0) {
+        const review = { name, comment, rating };
+        reviewsData.push(review);
+        nameInput.value = '';
+        commentInput.value = '';
+        resetRating();
+        saveReviewsToLocalStorage();
+        displayReviews();
+    } else {
+        alert('Please enter your name, review, and select a rating.');
+    }
+}
+
+// Function to reset rating selection
+function resetRating() {
+    const ratingInputs = document.getElementsByName('rate');
+    for (const input of ratingInputs) {
+        input.checked = false;
+    }
+}
+
+// Function to save reviews in local storage
+function saveReviewsToLocalStorage() {
+    localStorage.setItem('reviews', JSON.stringify(reviewsData));
+}
+
+// Function to retrieve reviews from local storage
+function getReviewsFromLocalStorage() {
+    const storedReviews = localStorage.getItem('reviews');
+    if (storedReviews) {
+        const reviews = JSON.parse(storedReviews);
+        for (const review of reviews) {
+            if (!review.rating) {
+                review.rating = 0;
+            }
+        }
+        return reviews;
+    }
+    return [];
+}
+
+// Function to display reviews
+function displayReviews() {
+    const reviewsContainer = document.getElementById('reviews');
+    reviewsContainer.innerHTML = '';
+
+    for (const review of reviewsData) {
+        const reviewElement = document.createElement('div');
+        reviewElement.classList.add('review');
+
+        const nameElement = document.createElement('h5');
+        nameElement.textContent = `Username : ${review.name}`;
+
+        const ratingElement = document.createElement('h6');
+        ratingElement.textContent = `Rating: ${review.rating} stars`; // Add 'stars' text
+
+        const commentElement = document.createElement('h6');
+        commentElement.textContent = `Message: ${review.comment}`;
+
+        reviewElement.appendChild(nameElement);
+        reviewElement.appendChild(ratingElement);
+        reviewElement.appendChild(commentElement);
+        reviewsContainer.appendChild(reviewElement);
+    }
+}
+
+
+// Initial setup to get reviews from local storage and display them
+reviewsData = getReviewsFromLocalStorage();
+displayReviews();
+
+
+// DELETE
+// Function to clear reviews from local storage
+function clearReviews() {
+    localStorage.removeItem('reviews');
+    reviewsData = []; // Reset reviewsData array
+    displayReviews(); // Update the displayed reviews
+}
 
 
 // HEADER

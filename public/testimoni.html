@@ -1,0 +1,37 @@
+
+<div class="container pt-4 pb-4">
+    <header class="pt-4 pb-3 text-center  services-style text-dark">
+        <h3>Testimonials </h3>
+      </header>
+    <div class="card bg-dark text-white rounded-5 p-4">
+        <div class="Landing d-grid col-12 mx-auto bg-black  p-4 rounded-5">
+    <header class="text-center ">
+      <!-- <h3>People say</h3> -->
+      <span>Please provide reviews about the products, services and features on our platform.</span>
+    </header>
+    <hr>
+        <div class="review-form form-outline">
+          <input type="text" id="name" class="form-control bg-dark text-white" placeholder="Your Name" />
+          <textarea id="comment" placeholder="Your Review" class="form-control bg-dark text-white"></textarea>
+          <div class="rate">
+            <input type="radio" id="star5" name="rate" value="5" />
+            <label class="star5" title="text">5 stars</label>
+            <input type="radio" id="star4" name="rate" value="4" />
+            <label for="star4" title="text">4 stars</label>
+            <input type="radio" id="star3" name="rate" value="3" />
+            <label for="star3" title="text">3 stars</label>
+            <input type="radio" id="star2" name="rate" value="2" />
+            <label for="star2" title="text">2 stars</label>
+            <input type="radio" id="star1" name="rate" value="1" />
+            <label for="star1" title="text">1 star</label>
+          </div>
+          <button class=" tombolan mx-auto mt-4 col-12 btn btn-primary" onclick="addReview()">Submit</button>
+        </div>
+    </div>
+
+      <div class="mt-4 reviews" id="reviews">
+    </div>
+</div>
+    <!-- HANYA UNTUK ADMIN -->
+    <!-- <button class="btn btn-danger mt-3" onclick="clearReviews()">Clear Reviews</button> -->
+</div>

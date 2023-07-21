@@ -424,7 +424,7 @@ function search() {
     let searchInput = document.getElementById('searchInput').value.toLowerCase();
 
     // Pindah ke halaman produk.html dengan parameter pencarian
-    window.location.href = '../produkKategori.html' + '?search=' + encodeURIComponent(searchInput);
+    window.location.href = './produkKategori.html' + '?search=' + encodeURIComponent(searchInput);
 }
 
 // Fungsi untuk mendapatkan nilai parameter pencarian dari URL
