@@ -16,6 +16,23 @@
             text-transform: capitalize;
             transition: all .2s linear;
         }
+         /* Set a different color for input placeholders */
+         input[type="text"]::placeholder,
+        input[type="number"]::placeholder {
+            color: #ccc; /* You can change this color to your desired placeholder color */
+        }
+
+        /* Additional styles for specific input types if needed */
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Optional: To hide the number input spinner in some browsers */
+        /* input[type="number"] {
+            -moz-appearance: textfield;
+        } */
     </style>
     <link
     rel="stylesheet"
@@ -25,7 +42,7 @@
 <body class="container-payment">
     <div class="payment">
         <div class="card bg-dark text-white rounded-5">
-            <div class="card-body">
+            <div class="p-4">
                 <form onsubmit="sendWhatsAppMessage(); return false;" >
                 <div class="d-grid col-12 mx-auto bg-black text-white p-4 rounded-5">
                     <header>
@@ -63,8 +80,8 @@
                                 </div>
                             </div>
                             <div class="inputBox">
-                                <span>Item code</span>
-                                <input type="text" placeholder="kode barang" name="kodeBarang" style="width: 50%;" class="form-control bg-dark text-white">
+                                <span>Item name</span>
+                                <input type="text" placeholder="enter the name of the item eg. item 1, item 2, item 3, etc." name="itemName"  class="form-control bg-dark text-white">
                             </div>
                            
                         </div>
